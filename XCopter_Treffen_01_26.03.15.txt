@@ -1,0 +1,62 @@
+XCopter - Erstes Treffen - 26.03.15
+
+Tools:				Frage:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * Scrum "Doku"		 	JIRA - Accounts? OpenProject ? https://www.openproject.org/
+ * Version Control - Git	GitHub anmelden alle (Flo erstellt Projekt und gibt Invite-Link rum)
+ * GoogleDocs			wirklich nötig ?!
+ * Kommunikation 		WhatsApp, Skype, Termin
+ * Star UML			Andere, bessere FreeWare
+ * Code Doku: doxygen		genaue Funktionsweise ?
+
+
+Code Conventions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Clean Code			Alternativen ?!
+ (Selber Festlegen		Überhaupt Möglich?!)
+
+
+"Alte" Projekt Dokumentation lesen (bis DO 02.04.15)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Person				Thema
+ 
+ Alle				Intro, Description, Requirements, System Overview
+ 
+ Lukas				Mainboard, Extrension Board, Sensors (10-17)
+ 
+ Alex 				Actors (17-24)
+
+ Stephan			SoPC (25-28)
+  
+ Flo, Jan, Benni		Communication Concept (28-42) 
+ 
+ Jochen				Software Architecture, Driver (42-46)
+ 
+ Thomas				Power Supply and Akk (53 - 58)
+
+ Dani				Physical Model (
+
+
+
+E-mail Addressen
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Flo - 	floschne@mail.hs-ulm.de
+lukas - oefner@mail.hs-ulm.de
+jan - 	goller@mail.hs-ulm.de
+alex - 	aott@mail.hs-ulm.de
+jochen - hoeft@mail.hs-ulm.de
+thomas - thweber@mail.hs-ulm.de
+dani - 	maurus@mail.hs-ulm.de (?)
+stephan - gabor@mail.hs-ulm.de
+benni - (?)
+
+
+GitHub
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Accounts:
+   Alle anlegen und dann an Flo den Usernamen schicken -> invite kommt..
+
+* Repo
+   https://github.com/XCopter-HSU/XCopter.git
