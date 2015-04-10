@@ -1,0 +1,42 @@
+ 
+Freitag: 9.45 Weekly Scrum !!!!!
+
+Ziel:
+
+-Fliegt 
+-autonome Lagehaltung
+-elektronische Hardware
+-Interface zur "Bodenstation"
+-Software auf elektronik selber 
+
+Wie:
+
+-dynamische Teams nach den Tasks
+
+
+
+**Stabile Stromversorgung**
+
+zusätzliche Abnahme:
+
+
+-stabile "Spannungsversorgung die für unser Problem ausreicht"
+-Testfälle generieren
+-plot 
+
+
+**Spromverbrauch richtig berechnen**
+
+	-Stromverbrauch messen von allen Komponenten
+	-Maximallast berechnen 
+
+
+
+**Auswahl Fernbedienung**
+
+	-Summensignal für Empfänger
+
+	http://www.google.de/imgres?imgurl=http://www.live-hobby.de/out/pictures/master/product/4/33116.jpg&imgrefurl=http://www.live-hobby.de/Sender-Empfaenger/Sender/Graupner-mx-16-Computersystem-8-Kanal-HoTT-Handsender-33116-oxid.html&h=599&w=800&tbnid=6AH__YJMNpCiIM:&zoom=1&tbnh=90&tbnw=120&usg=__uN-3asnGWaj7FtzLWFu_AB9caxk=&docid=QyDHX0nFEg_etM
+
+
+
