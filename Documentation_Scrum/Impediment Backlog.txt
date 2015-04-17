@@ -2,28 +2,29 @@
 
 Example by Lukas Ö:
 
-Titel: Impediment Backlog is full of mistakes
+Title: Impediment Backlog is full of mistakes
 Iteration: Sprint 1
 Description: English is not easy
 Resolution: Learning English in spare time
 _______________________________________________________________
 
-Titel: 
+Title: Missing transmitter for configure the NAZA flight-controller
+Iteration:  Sprint 1
+Description: We have not bin able to connect the flight-controller with the Computer, even though all cable were connected correctly.
+			The flight-controller does not connect over USB if there is no Transmitter connected to the flight-controller.
+Resolution: Waiting for the remotecontroll which is already ordered.
+ 
+Title: 
 Iteration: 
 Description: 
 Resolution: 
 
-Titel: 
+Title: 
 Iteration: 
 Description: 
 Resolution: 
 
-Titel: 
-Iteration: 
-Description: 
-Resolution: 
-
-Titel: 
+Title: 
 Iteration: 
 Description: 
 Resolution: 
