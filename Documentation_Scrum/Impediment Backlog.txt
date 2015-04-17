@@ -1,11 +1,11 @@
-**Impediment Backlog**
+﻿**Impediment Backlog**
 
 Example by Lukas Ö:
 
 Titel: Impediment Backlog is full of mistakes
 Iteration: Sprint 1
 Description: English is not easy
-Resolution: Lern English in spare time
+Resolution: Learning English in spare time
 _______________________________________________________________
 
 Titel: 
