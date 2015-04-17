@@ -1,0 +1,9 @@
+Software hier: http://www.dji.com/product/naza-m-v2/download
+
+Installationsanleitung: 
+*	"Naza-M v2 Assistant Software v2.20" downloaden
+*	"DJI WIN Driver Installer" wird auch benötigt
+* 	NAZA V2 mit PMU (Power Management Unit) an PC anschließen und DJI_WIN_Driver_Installer.exe ausführen und Instruktionen folgen
+*	NAZAM_2.20_Installer.exe ausführen und Instruktionen folgen
+*	nazam.exe kann nun der NAZA v2 konfiguriert werden
+*	Im "Naza-M v2 Quick Start Manual v1.26" stehen weitere Informationen, falls erforderlich
