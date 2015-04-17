@@ -4,14 +4,12 @@ Example by Lukas Ö:
 
 Title: Impediment Backlog is full of mistakes
 Iteration: Sprint 1
-Task: 
 Description: English is not easy
 Resolution: Learning English in spare time
 _______________________________________________________________
 
 Title: Missing transmitter for configure the NAZA flight-controller
 Iteration:  Sprint 1
-Task: 
 Description: We have not bin able to connect the flight-controller with the Computer, even though all cable were connected correctly.
 			The flight-controller does not connect over USB if there is no Transmitter connected to the flight-controller.
 Resolution: Waiting for the remotecontroll which is already ordered.
