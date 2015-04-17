@@ -1,0 +1,28 @@
+How-To: charging Batteries for the X-Copter
+
+Info: This little tutorial describes how to charge our batteries for the X-Copter-Project
+
+Our Hardware: 	Battery1 (LiPo_01): FlightPower Hacker evo 20 4900mAh 6S1P
+									charging: continuous: 20C, burst: 50C, charging: 1C
+									Stored in: Speicher[31] as LiPo_01
+				Battery2 (LiPo_02): XTRON 40C 5000mAh 6S1P
+									continuous: 40C, burst: 80C, charging: 4C
+//ToDo								Stored in: Speicher[31] as LiPo_02
+				Battery3 (NiCd_01): loading current: 110mAh
+				Charging-Station:	Ultra Duo Plus 60
+									Stored in: Speicher[19] as NiCa_01
+
+We saved three configurations in the Ultra Duo for our batteries named: Lipo_01, Lipo_02 and NiCd_01
+
+Important: Warnings and security information are found in the documentantion-pdf:
+6478_ULTRA DUO PLUS 60_de.pdf
+You should read that before using the charging station as the information therein will not be
+in this tutorial
+
+Charging Batteries:
+Current charged per charging session = current * charging time
+Refer to the datasheet of your batteries for information about max. current for charging.
+Standard-charging-current is 1/10 of the capacity (1,7Ah capacity -> 170mA standard-charging-current)
+connect charging cables to charging station (red = Plus, black = minus)
+
+We will use the CC-CV charging-mode for our batteries as fast-charging is too risky
