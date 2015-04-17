@@ -1,9 +1,10 @@
-﻿**Impediment Backlog**
+**Impediment Backlog**
 
 Example by Lukas Ö:
 
 Title: Impediment Backlog is full of mistakes
 Iteration: Sprint 1
+Task: 123
 Description: English is not easy
 Resolution: Learning English in spare time
 _______________________________________________________________
@@ -16,11 +17,13 @@ Resolution: Waiting for the remotecontroll which is already ordered.
  
 Title: 
 Iteration: 
+Task:
 Description: 
 Resolution: 
 
 Title: 
 Iteration: 
+Task:
 Description: 
 Resolution: 
 
