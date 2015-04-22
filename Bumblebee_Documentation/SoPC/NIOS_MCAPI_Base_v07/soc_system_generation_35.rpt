@@ -1,0 +1,63 @@
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory=H:/Projekt2_Neu/NIOS_MCAPI_Base_v04/NIOS_MCAPI_Base_v04/ --output-directory=H:/Projekt2_Neu/NIOS_MCAPI_Base_v04/NIOS_MCAPI_Base_v04/soc_system/synthesis/ --file-set=QUARTUS_SYNTH --report-file=html:H:/Projekt2_Neu/NIOS_MCAPI_Base_v04/NIOS_MCAPI_Base_v04/soc_system.html --report-file=sopcinfo:H:/Projekt2_Neu/NIOS_MCAPI_Base_v04/NIOS_MCAPI_Base_v04/soc_system.sopcinfo --report-file=cmp:H:/Projekt2_Neu/NIOS_MCAPI_Base_v04/NIOS_MCAPI_Base_v04/soc_system.cmp --report-file=qip:H:/Projekt2_Neu/NIOS_MCAPI_Base_v04/NIOS_MCAPI_Base_v04/soc_system/synthesis/soc_system.qip --report-file=svd --report-file=regmap:H:/Projekt2_Neu/NIOS_MCAPI_Base_v04/NIOS_MCAPI_Base_v04/soc_system/synthesis/soc_system.regmap --report-file=debuginfo:H:/Projekt2_Neu/NIOS_MCAPI_Base_v04/NIOS_MCAPI_Base_v04/soc_system/synthesis/soc_system.debuginfo --system-info=DEVICE_FAMILY="Cyclone V" --system-info=DEVICE=5CSEMA5F31C6 --system-info=DEVICE_SPEEDGRADE=6 --component-file=H:/Projekt2_Neu/NIOS_MCAPI_Base_v04/NIOS_MCAPI_Base_v04/soc_system.qsys --language=VERILOG
+Progress: Loading NIOS_MCAPI_Base_v04/soc_system.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.1]
+Progress: Parameterizing module clk_0
+Progress: Adding hps_0 [altera_hps 13.1]
+Progress: Parameterizing module hps_0
+Progress: Adding onchip_sram [altera_avalon_onchip_memory2 13.1]
+Progress: Parameterizing module onchip_sram
+Progress: Adding hps_only_master [altera_jtag_avalon_master 13.1]
+Progress: Parameterizing module hps_only_master
+Progress: Adding sysid_qsys [altera_avalon_sysid_qsys 13.1]
+Progress: Parameterizing module sysid_qsys
+Progress: Adding fpga_only_master [altera_jtag_avalon_master 13.1]
+Progress: Parameterizing module fpga_only_master
+Progress: Adding intr_capturer_0 [intr_capturer 100.99.98.97]
+Progress: Parameterizing module intr_capturer_0
+Progress: Adding pio_aliveTest_cpu_s0 [altera_avalon_pio 13.1]
+Progress: Parameterizing module pio_aliveTest_cpu_s0
+Progress: Adding cpu_s0 [altera_nios2_qsys 13.1]
+Progress: Parameterizing module cpu_s0
+Progress: Adding timer_cpu_s0 [altera_avalon_timer 13.1]
+Progress: Parameterizing module timer_cpu_s0
+Progress: Adding jtag_uart_cpu_s0 [altera_avalon_jtag_uart 13.1]
+Progress: Parameterizing module jtag_uart_cpu_s0
+Progress: Adding sdram [altera_avalon_new_sdram_controller 13.1]
+Progress: Parameterizing module sdram
+Progress: Adding fifo_bridge_cpuM_cpus0 [CPU_FiFo_Bridge 1.0]
+Progress: Parameterizing module fifo_bridge_cpuM_cpus0
+Progress: Adding cpu_s1 [altera_nios2_qsys 13.1]
+Progress: Parameterizing module cpu_s1
+Progress: Adding timer_cpu_s1 [altera_avalon_timer 13.1]
+Progress: Parameterizing module timer_cpu_s1
+Progress: Adding jtag_uart_cpu_s1 [altera_avalon_jtag_uart 13.1]
+Progress: Parameterizing module jtag_uart_cpu_s1
+Progress: Adding pio_aliveTest_cpu_s1 [altera_avalon_pio 13.1]
+Progress: Parameterizing module pio_aliveTest_cpu_s1
+Progress: Adding fifo_bridge_cpus0_cpus1 [CPU_FiFo_Bridge 1.0]
+Progress: Parameterizing module fifo_bridge_cpus0_cpus1
+Progress: Adding fifo_bridge_cpuM_cpus1 [CPU_FiFo_Bridge 1.0]
+Progress: Parameterizing module fifo_bridge_cpuM_cpus1
+Progress: Adding system_pll [altera_pll 13.1]
+Progress: Parameterizing module system_pll
+Progress: Adding s0_io_clockCrossing_bridge [altera_avalon_mm_clock_crossing_bridge 13.1]
+Progress: Parameterizing module s0_io_clockCrossing_bridge
+Progress: Adding sdram_clockCrossing_Bridge [altera_avalon_mm_clock_crossing_bridge 13.1]
+Progress: Parameterizing module sdram_clockCrossing_Bridge
+Progress: Adding sdram_pll [altera_pll 13.1]
+Progress: Parameterizing module sdram_pll
+Progress: Adding s1_io_clockCrossing_bridge [altera_avalon_mm_clock_crossing_bridge 13.1]
+Progress: Parameterizing module s1_io_clockCrossing_bridge
+Progress: Adding i2c_cpu_s0 [oc_i2c_master 8.0]
+Progress: Parameterizing module i2c_cpu_s0
+Progress: Adding i2c_cpu_s1 [oc_i2c_master 8.0]
+Progress: Parameterizing module i2c_cpu_s1
+Progress: Adding pwm_cpu_s0_1 [pwm 1.0]
+Progress: Parameterizing module pwm_cpu_s0_1
+Progress: Adding pwm_pll [altera_pll 13.1]
+Progress: Parameterizing module pwm_pll
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating

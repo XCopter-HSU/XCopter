@@ -1,0 +1,389 @@
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory=G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/ --output-directory=G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/soc_system/synthesis/ --file-set=QUARTUS_SYNTH --report-file=html:G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/soc_system.html --report-file=sopcinfo:G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/soc_system.sopcinfo --report-file=cmp:G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/soc_system.cmp --report-file=qip:G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/soc_system/synthesis/soc_system.qip --report-file=svd --report-file=regmap:G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/soc_system/synthesis/soc_system.regmap --report-file=debuginfo:G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/soc_system/synthesis/soc_system.debuginfo --system-info=DEVICE_FAMILY="Cyclone V" --system-info=DEVICE=5CSEMA5F31C6 --system-info=DEVICE_SPEEDGRADE=6 --component-file=G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/soc_system.qsys --language=VERILOG
+Progress: Loading NIOS_MCAPI_Base_v01/soc_system.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.1]
+Progress: Parameterizing module clk_0
+Progress: Adding hps_0 [altera_hps 13.1]
+Progress: Parameterizing module hps_0
+Progress: Adding onchip_sram [altera_avalon_onchip_memory2 13.1]
+Progress: Parameterizing module onchip_sram
+Progress: Adding hps_only_master [altera_jtag_avalon_master 13.1]
+Progress: Parameterizing module hps_only_master
+Progress: Adding sysid_qsys [altera_avalon_sysid_qsys 13.1]
+Progress: Parameterizing module sysid_qsys
+Progress: Adding fpga_only_master [altera_jtag_avalon_master 13.1]
+Progress: Parameterizing module fpga_only_master
+Progress: Adding intr_capturer_0 [intr_capturer 100.99.98.97]
+Progress: Parameterizing module intr_capturer_0
+Progress: Adding pio_aliveTest_cpu_s0 [altera_avalon_pio 13.1]
+Progress: Parameterizing module pio_aliveTest_cpu_s0
+Progress: Adding cpu_s0 [altera_nios2_qsys 13.1]
+Progress: Parameterizing module cpu_s0
+Progress: Adding timer_cpu_s0 [altera_avalon_timer 13.1]
+Progress: Parameterizing module timer_cpu_s0
+Progress: Adding jtag_uart_cpu_s0 [altera_avalon_jtag_uart 13.1]
+Progress: Parameterizing module jtag_uart_cpu_s0
+Progress: Adding pll_0 [altera_pll 13.1]
+Progress: Parameterizing module pll_0
+Progress: Adding sdram [altera_avalon_new_sdram_controller 13.1]
+Progress: Parameterizing module sdram
+Progress: Adding fifo_bridge_cpuM_cpus0 [CPU_FiFo_Bridge 1.0]
+Progress: Parameterizing module fifo_bridge_cpuM_cpus0
+Progress: Adding cpu_s1 [altera_nios2_qsys 13.1]
+Progress: Parameterizing module cpu_s1
+Progress: Adding timer_cpu_s1 [altera_avalon_timer 13.1]
+Progress: Parameterizing module timer_cpu_s1
+Progress: Adding jtag_uart_cpu_s1 [altera_avalon_jtag_uart 13.1]
+Progress: Parameterizing module jtag_uart_cpu_s1
+Progress: Adding pio_aliveTest_cpu_s1 [altera_avalon_pio 13.1]
+Progress: Parameterizing module pio_aliveTest_cpu_s1
+Progress: Adding fifo_bridge_cpus0_cpus1 [CPU_FiFo_Bridge 1.0]
+Progress: Parameterizing module fifo_bridge_cpus0_cpus1
+Progress: Adding fifo_bridge_cpuM_cpus1 [CPU_FiFo_Bridge 1.0]
+Progress: Parameterizing module fifo_bridge_cpuM_cpus1
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: soc_system.sysid_qsys: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: soc_system.sysid_qsys: Time stamp will be automatically updated when this component is generated.
+Info: soc_system.pll_0: The legal reference clock frequency is 5.0 MHz..800.0 MHz
+Info: soc_system.pll_0: Able to implement PLL with user settings
+Warning: soc_system.pio_aliveTest_cpu_s1: pio_aliveTest_cpu_s1.external_connection must be exported, or connected to a matching conduit.
+Info: soc_system: Generating soc_system "soc_system" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 20 modules, 74 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_initial_interconnect_transform: After transform: 4 modules, 4 connections
+Info: merlin_translator_transform: After transform: 5 modules, 7 connections
+Info: merlin_domain_transform: After transform: 8 modules, 24 connections
+Info: merlin_router_transform: After transform: 11 modules, 33 connections
+Info: merlin_traffic_limiter_transform: After transform: 12 modules, 37 connections
+Info: merlin_network_to_switch_transform: After transform: 17 modules, 47 connections
+Info: merlin_width_transform: After transform: 21 modules, 59 connections
+Info: Inserting clock-crossing logic between cmd_xbar_demux.src0 and cmd_xbar_mux.sink0
+Info: Inserting clock-crossing logic between cmd_xbar_demux.src1 and cmd_xbar_mux_001.sink0
+Info: Inserting clock-crossing logic between rsp_xbar_demux.src0 and rsp_xbar_mux.sink0
+Info: Inserting clock-crossing logic between rsp_xbar_demux_001.src0 and rsp_xbar_mux.sink1
+Info: com_altera_sopcmodel_transforms_avalon_ClockCrossingTransform: After transform: 25 modules, 79 connections
+Info: limiter_update_transform: After transform: 25 modules, 80 connections
+Info: merlin_clock_and_reset_bridge_transform: After transform: 30 modules, 111 connections
+Info: merlin_hierarchy_transform: After transform: 21 modules, 80 connections
+Info: merlin_initial_interconnect_transform: After transform: 5 modules, 8 connections
+Info: merlin_translator_transform: After transform: 8 modules, 17 connections
+Info: merlin_domain_transform: After transform: 14 modules, 46 connections
+Info: merlin_router_transform: After transform: 17 modules, 55 connections
+Info: merlin_traffic_limiter_transform: After transform: 18 modules, 59 connections
+Info: merlin_network_to_switch_transform: After transform: 23 modules, 69 connections
+Info: limiter_update_transform: After transform: 23 modules, 70 connections
+Info: merlin_clock_and_reset_bridge_transform: After transform: 26 modules, 94 connections
+Info: merlin_hierarchy_transform: After transform: 22 modules, 84 connections
+Info: merlin_initial_interconnect_transform: After transform: 9 modules, 23 connections
+Info: merlin_translator_transform: After transform: 18 modules, 50 connections
+Info: merlin_domain_transform: After transform: 36 modules, 142 connections
+Info: merlin_router_transform: After transform: 45 modules, 169 connections
+Info: merlin_traffic_limiter_transform: After transform: 46 modules, 173 connections
+Info: merlin_burst_transform: After transform: 48 modules, 179 connections
+Info: merlin_network_to_switch_transform: After transform: 65 modules, 215 connections
+Info: merlin_width_transform: After transform: 67 modules, 221 connections
+Info: limiter_update_transform: After transform: 67 modules, 222 connections
+Info: merlin_clock_and_reset_bridge_transform: After transform: 69 modules, 289 connections
+Info: merlin_hierarchy_transform: After transform: 23 modules, 86 connections
+Info: merlin_initial_interconnect_transform: After transform: 5 modules, 7 connections
+Info: merlin_translator_transform: After transform: 7 modules, 13 connections
+Info: merlin_domain_transform: After transform: 15 modules, 52 connections
+Info: merlin_router_transform: After transform: 19 modules, 64 connections
+Info: merlin_traffic_limiter_transform: After transform: 21 modules, 72 connections
+Info: merlin_burst_transform: After transform: 23 modules, 78 connections
+Info: merlin_network_to_switch_transform: After transform: 30 modules, 94 connections
+Info: Inserting clock-crossing logic between cmd_xbar_demux.src0 and cmd_xbar_mux.sink0
+Info: Inserting clock-crossing logic between cmd_xbar_demux.src1 and cmd_xbar_mux_001.sink0
+Info: Inserting clock-crossing logic between cmd_xbar_demux_001.src0 and cmd_xbar_mux.sink1
+Info: Inserting clock-crossing logic between cmd_xbar_demux_001.src1 and cmd_xbar_mux_001.sink1
+Info: Inserting clock-crossing logic between rsp_xbar_demux.src0 and rsp_xbar_mux.sink0
+Info: Inserting clock-crossing logic between rsp_xbar_demux.src1 and rsp_xbar_mux_001.sink0
+Info: Inserting clock-crossing logic between rsp_xbar_demux_001.src0 and rsp_xbar_mux.sink1
+Info: Inserting clock-crossing logic between rsp_xbar_demux_001.src1 and rsp_xbar_mux_001.sink1
+Info: com_altera_sopcmodel_transforms_avalon_ClockCrossingTransform: After transform: 38 modules, 134 connections
+Info: limiter_update_transform: After transform: 38 modules, 136 connections
+Info: merlin_clock_and_reset_bridge_transform: After transform: 42 modules, 183 connections
+Info: merlin_hierarchy_transform: After transform: 24 modules, 91 connections
+Info: merlin_initial_interconnect_transform: After transform: 9 modules, 23 connections
+Info: merlin_translator_transform: After transform: 18 modules, 50 connections
+Info: merlin_domain_transform: After transform: 35 modules, 139 connections
+Info: merlin_router_transform: After transform: 44 modules, 166 connections
+Info: merlin_traffic_limiter_transform: After transform: 45 modules, 170 connections
+Info: merlin_network_to_switch_transform: After transform: 62 modules, 206 connections
+Info: limiter_update_transform: After transform: 62 modules, 207 connections
+Info: merlin_clock_and_reset_bridge_transform: After transform: 64 modules, 269 connections
+Info: merlin_hierarchy_transform: After transform: 25 modules, 93 connections
+Info: merlin_mm_transform: After transform: 25 modules, 93 connections
+Warning: hps_0.f2h_irq0: Cannot connect clock for irq_mapper.sender
+Warning: hps_0.f2h_irq0: Cannot connect reset for irq_mapper.sender
+Warning: hps_0.f2h_irq1: Cannot connect clock for irq_mapper_001.sender
+Warning: hps_0.f2h_irq1: Cannot connect reset for irq_mapper_001.sender
+Info: merlin_interrupt_mapper_transform: After transform: 30 modules, 104 connections
+Info: merlin_interrupt_fanout_transform: After transform: 32 modules, 110 connections
+Info: reset_adaptation_transform: After transform: 36 modules, 141 connections
+Info: hps_0: "Doing Pretransform for module: hps_0"
+Info: pipeline_bridge_swap_transform: After transform: 2 modules, 0 connections
+Info: No custom instruction connections, skipping transform 
+Info: hps_0: "soc_system" instantiated altera_hps "hps_0"
+Info: onchip_sram: Starting RTL generation for module 'soc_system_onchip_sram'
+Info: onchip_sram:   Generation command is [exec C:/altera/13.1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.1/quartus/bin/perl/lib -I C:/altera/13.1/quartus/sopc_builder/bin/europa -I C:/altera/13.1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.1/quartus/sopc_builder/bin -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=soc_system_onchip_sram --dir=C:/Users/strahnen/AppData/Local/Temp/alt6394_5014741059986488124.dir/0001_onchip_sram_gen/ --quartus_dir=C:/altera/13.1/quartus --verilog --config=C:/Users/strahnen/AppData/Local/Temp/alt6394_5014741059986488124.dir/0001_onchip_sram_gen//soc_system_onchip_sram_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_sram: Done RTL generation for module 'soc_system_onchip_sram'
+Info: onchip_sram: "soc_system" instantiated altera_avalon_onchip_memory2 "onchip_sram"
+Info: pipeline_bridge_swap_transform: After transform: 10 modules, 24 connections
+Info: No custom instruction connections, skipping transform 
+Info: reset_adaptation_transform: After transform: 11 modules, 26 connections
+Info: hps_only_master: "soc_system" instantiated altera_jtag_avalon_master "hps_only_master"
+Info: sysid_qsys: "soc_system" instantiated altera_avalon_sysid_qsys "sysid_qsys"
+Info: intr_capturer_0: "soc_system" instantiated intr_capturer "intr_capturer_0"
+Info: pio_aliveTest_cpu_s0: Starting RTL generation for module 'soc_system_pio_aliveTest_cpu_s0'
+Info: pio_aliveTest_cpu_s0:   Generation command is [exec C:/altera/13.1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.1/quartus/bin/perl/lib -I C:/altera/13.1/quartus/sopc_builder/bin/europa -I C:/altera/13.1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.1/quartus/sopc_builder/bin -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_pio_aliveTest_cpu_s0 --dir=C:/Users/strahnen/AppData/Local/Temp/alt6394_5014741059986488124.dir/0004_pio_aliveTest_cpu_s0_gen/ --quartus_dir=C:/altera/13.1/quartus --verilog --config=C:/Users/strahnen/AppData/Local/Temp/alt6394_5014741059986488124.dir/0004_pio_aliveTest_cpu_s0_gen//soc_system_pio_aliveTest_cpu_s0_component_configuration.pl  --do_build_sim=0  ]
+Info: pio_aliveTest_cpu_s0: Done RTL generation for module 'soc_system_pio_aliveTest_cpu_s0'
+Info: pio_aliveTest_cpu_s0: "soc_system" instantiated altera_avalon_pio "pio_aliveTest_cpu_s0"
+Info: cpu_s0: Starting RTL generation for module 'soc_system_cpu_s0'
+Info: cpu_s0:   Generation command is [exec C:/altera/13.1/quartus/bin/eperlcmd.exe -I C:/altera/13.1/quartus/bin/perl/lib -I C:/altera/13.1/quartus/sopc_builder/bin/europa -I C:/altera/13.1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.1/quartus/sopc_builder/bin -I C:/altera/13.1/quartus/../ip/altera/nios2_ip/altera_nios2/cpu_lib -I C:/altera/13.1/quartus/../ip/altera/nios2_ip/altera_nios2/nios_lib -I C:/altera/13.1/quartus/../ip/altera/nios2_ip/altera_nios2 -I C:/altera/13.1/quartus/../ip/altera/nios2_ip/altera_nios2 -- C:/altera/13.1/quartus/../ip/altera/nios2_ip/altera_nios2/generate_rtl.epl --name=soc_system_cpu_s0 --dir=C:/Users/strahnen/AppData/Local/Temp/alt6394_5014741059986488124.dir/0005_cpu_s0_gen/ --quartus_dir=C:/altera/13.1/quartus --verilog --config=C:/Users/strahnen/AppData/Local/Temp/alt6394_5014741059986488124.dir/0005_cpu_s0_gen//soc_system_cpu_s0_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu_s0: # 2014.11.20 15:07:24 (*) Starting Nios II generation
+Info: cpu_s0: # 2014.11.20 15:07:24 (*)   Checking for plaintext license.
+Info: cpu_s0: # 2014.11.20 15:07:31 (*)   Plaintext license not found.
+Info: cpu_s0: # 2014.11.20 15:07:31 (*)   Checking for encrypted license (non-evaluation).
+Info: cpu_s0: # 2014.11.20 15:07:33 (*)   Encrypted license found.  SOF will not be time-limited.
+Info: cpu_s0: # 2014.11.20 15:07:33 (*)   Elaborating CPU configuration settings
+Info: cpu_s0: # 2014.11.20 15:07:33 (*)   Creating all objects for CPU
+Info: cpu_s0: # 2014.11.20 15:07:33 (*)     Testbench
+Info: cpu_s0: # 2014.11.20 15:07:33 (*)     Instruction decoding
+Info: cpu_s0: # 2014.11.20 15:07:33 (*)       Instruction fields
+Info: cpu_s0: # 2014.11.20 15:07:33 (*)       Instruction decodes
+Info: cpu_s0: # 2014.11.20 15:07:34 (*)       Signals for RTL simulation waveforms
+Info: cpu_s0: # 2014.11.20 15:07:34 (*)       Instruction controls
+Info: cpu_s0: # 2014.11.20 15:07:35 (*)     Pipeline frontend
+Info: cpu_s0: # 2014.11.20 15:07:35 (*)     Pipeline backend
+Info: cpu_s0: # 2014.11.20 15:07:39 (*)   Generating RTL from CPU objects
+Info: cpu_s0: # 2014.11.20 15:07:44 (*)   Creating encrypted RTL
+Info: cpu_s0: # 2014.11.20 15:07:45 (*) Done Nios II generation
+Info: cpu_s0: Done RTL generation for module 'soc_system_cpu_s0'
+Info: cpu_s0: "soc_system" instantiated altera_nios2_qsys "cpu_s0"
+Info: timer_cpu_s0: Starting RTL generation for module 'soc_system_timer_cpu_s0'
+Info: timer_cpu_s0:   Generation command is [exec C:/altera/13.1/quartus/bin//perl/bin/perl.exe -I C:/altera/13.1/quartus/bin//perl/lib -I C:/altera/13.1/quartus/sopc_builder/bin/europa -I C:/altera/13.1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.1/quartus/sopc_builder/bin -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=soc_system_timer_cpu_s0 --dir=C:/Users/strahnen/AppData/Local/Temp/alt6394_5014741059986488124.dir/0006_timer_cpu_s0_gen/ --quartus_dir=C:/altera/13.1/quartus --verilog --config=C:/Users/strahnen/AppData/Local/Temp/alt6394_5014741059986488124.dir/0006_timer_cpu_s0_gen//soc_system_timer_cpu_s0_component_configuration.pl  --do_build_sim=0  ]
+Info: timer_cpu_s0: Done RTL generation for module 'soc_system_timer_cpu_s0'
+Info: timer_cpu_s0: "soc_system" instantiated altera_avalon_timer "timer_cpu_s0"
+Info: jtag_uart_cpu_s0: Starting RTL generation for module 'soc_system_jtag_uart_cpu_s0'
+Info: jtag_uart_cpu_s0:   Generation command is [exec C:/altera/13.1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.1/quartus/bin/perl/lib -I C:/altera/13.1/quartus/sopc_builder/bin/europa -I C:/altera/13.1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.1/quartus/sopc_builder/bin -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=soc_system_jtag_uart_cpu_s0 --dir=C:/Users/strahnen/AppData/Local/Temp/alt6394_5014741059986488124.dir/0007_jtag_uart_cpu_s0_gen/ --quartus_dir=C:/altera/13.1/quartus --verilog --config=C:/Users/strahnen/AppData/Local/Temp/alt6394_5014741059986488124.dir/0007_jtag_uart_cpu_s0_gen//soc_system_jtag_uart_cpu_s0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_cpu_s0: Done RTL generation for module 'soc_system_jtag_uart_cpu_s0'
+Info: jtag_uart_cpu_s0: "soc_system" instantiated altera_avalon_jtag_uart "jtag_uart_cpu_s0"
+Info: pll_0: "soc_system" instantiated altera_pll "pll_0"
+Info: sdram: Starting RTL generation for module 'soc_system_sdram'
+Info: sdram:   Generation command is [exec C:/altera/13.1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.1/quartus/bin/perl/lib -I C:/altera/13.1/quartus/sopc_builder/bin/europa -I C:/altera/13.1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.1/quartus/sopc_builder/bin -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=soc_system_sdram --dir=C:/Users/strahnen/AppData/Local/Temp/alt6394_5014741059986488124.dir/0009_sdram_gen/ --quartus_dir=C:/altera/13.1/quartus --verilog --config=C:/Users/strahnen/AppData/Local/Temp/alt6394_5014741059986488124.dir/0009_sdram_gen//soc_system_sdram_component_configuration.pl  --do_build_sim=0  ]
+Info: sdram: Done RTL generation for module 'soc_system_sdram'
+Info: sdram: "soc_system" instantiated altera_avalon_new_sdram_controller "sdram"
+Info: fifo_bridge_cpuM_cpus0: "soc_system" instantiated CPU_FiFo_Bridge "fifo_bridge_cpuM_cpus0"
+Info: cpu_s1: Starting RTL generation for module 'soc_system_cpu_s1'
+Info: cpu_s1:   Generation command is [exec C:/altera/13.1/quartus/bin/eperlcmd.exe -I C:/altera/13.1/quartus/bin/perl/lib -I C:/altera/13.1/quartus/sopc_builder/bin/europa -I C:/altera/13.1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.1/quartus/sopc_builder/bin -I C:/altera/13.1/quartus/../ip/altera/nios2_ip/altera_nios2/cpu_lib -I C:/altera/13.1/quartus/../ip/altera/nios2_ip/altera_nios2/nios_lib -I C:/altera/13.1/quartus/../ip/altera/nios2_ip/altera_nios2 -I C:/altera/13.1/quartus/../ip/altera/nios2_ip/altera_nios2 -- C:/altera/13.1/quartus/../ip/altera/nios2_ip/altera_nios2/generate_rtl.epl --name=soc_system_cpu_s1 --dir=C:/Users/strahnen/AppData/Local/Temp/alt6394_5014741059986488124.dir/0011_cpu_s1_gen/ --quartus_dir=C:/altera/13.1/quartus --verilog --config=C:/Users/strahnen/AppData/Local/Temp/alt6394_5014741059986488124.dir/0011_cpu_s1_gen//soc_system_cpu_s1_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu_s1: # 2014.11.20 15:08:11 (*) Starting Nios II generation
+Info: cpu_s1: # 2014.11.20 15:08:11 (*)   Checking for plaintext license.
+Info: cpu_s1: # 2014.11.20 15:08:12 (*)   Plaintext license not found.
+Info: cpu_s1: # 2014.11.20 15:08:12 (*)   Checking for encrypted license (non-evaluation).
+Info: cpu_s1: # 2014.11.20 15:08:14 (*)   Encrypted license found.  SOF will not be time-limited.
+Info: cpu_s1: # 2014.11.20 15:08:14 (*)   Elaborating CPU configuration settings
+Info: cpu_s1: # 2014.11.20 15:08:14 (*)   Creating all objects for CPU
+Info: cpu_s1: # 2014.11.20 15:08:14 (*)     Testbench
+Info: cpu_s1: # 2014.11.20 15:08:14 (*)     Instruction decoding
+Info: cpu_s1: # 2014.11.20 15:08:14 (*)       Instruction fields
+Info: cpu_s1: # 2014.11.20 15:08:15 (*)       Instruction decodes
+Info: cpu_s1: # 2014.11.20 15:08:16 (*)       Signals for RTL simulation waveforms
+Info: cpu_s1: # 2014.11.20 15:08:16 (*)       Instruction controls
+Info: cpu_s1: # 2014.11.20 15:08:16 (*)     Pipeline frontend
+Info: cpu_s1: # 2014.11.20 15:08:16 (*)     Pipeline backend
+Info: cpu_s1: # 2014.11.20 15:08:20 (*)   Generating RTL from CPU objects
+Info: cpu_s1: # 2014.11.20 15:08:25 (*)   Creating encrypted RTL
+Info: cpu_s1: # 2014.11.20 15:08:26 (*) Done Nios II generation
+Info: cpu_s1: Done RTL generation for module 'soc_system_cpu_s1'
+Info: cpu_s1: "soc_system" instantiated altera_nios2_qsys "cpu_s1"
+Info: pipeline_bridge_swap_transform: After transform: 26 modules, 78 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 26 modules, 78 connections
+Info: mm_interconnect_0: "soc_system" instantiated altera_merlin_interconnect_wrapper "mm_interconnect_0"
+Info: pipeline_bridge_swap_transform: After transform: 21 modules, 63 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 21 modules, 63 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 21 modules, 63 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 21 modules, 63 connections
+Info: mm_interconnect_1: "soc_system" instantiated altera_merlin_interconnect_wrapper "mm_interconnect_1"
+Info: pipeline_bridge_swap_transform: After transform: 60 modules, 200 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 60 modules, 200 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 60 modules, 200 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 60 modules, 200 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 60 modules, 200 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 60 modules, 200 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 60 modules, 200 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 60 modules, 200 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 60 modules, 200 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 60 modules, 200 connections
+Info: mm_interconnect_2: "soc_system" instantiated altera_merlin_interconnect_wrapper "mm_interconnect_2"
+Info: pipeline_bridge_swap_transform: After transform: 37 modules, 130 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 37 modules, 130 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 37 modules, 130 connections
+Info: mm_interconnect_3: "soc_system" instantiated altera_merlin_interconnect_wrapper "mm_interconnect_3"
+Info: pipeline_bridge_swap_transform: After transform: 55 modules, 185 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 55 modules, 185 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 55 modules, 185 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 55 modules, 185 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 55 modules, 185 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 55 modules, 185 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 55 modules, 185 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 55 modules, 185 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 55 modules, 185 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 55 modules, 185 connections
+Info: mm_interconnect_4: "soc_system" instantiated altera_merlin_interconnect_wrapper "mm_interconnect_4"
+Info: irq_mapper: "soc_system" instantiated altera_irq_mapper "irq_mapper"
+Info: irq_mapper_001: "soc_system" instantiated altera_irq_mapper "irq_mapper_001"
+Info: irq_mapper_003: "soc_system" instantiated altera_irq_mapper "irq_mapper_003"
+Info: rst_controller: "soc_system" instantiated altera_reset_controller "rst_controller"
+Info: fpga_interfaces: "hps_0" instantiated altera_interface_generator "fpga_interfaces"
+Info: pipeline_bridge_swap_transform: After transform: 1 modules, 0 connections
+Info: No custom instruction connections, skipping transform 
+Info: hps_io: "hps_0" instantiated altera_hps_io "hps_io"
+Info: jtag_phy_embedded_in_jtag_master: "hps_only_master" instantiated altera_jtag_dc_streaming "jtag_phy_embedded_in_jtag_master"
+Info: timing_adt: Starting generation. 
+Info: timing_adt: "hps_only_master" instantiated timing_adapter "timing_adt"
+Info: fifo: "hps_only_master" instantiated altera_avalon_sc_fifo "fifo"
+Info: b2p: "hps_only_master" instantiated altera_avalon_st_bytes_to_packets "b2p"
+Info: p2b: "hps_only_master" instantiated altera_avalon_st_packets_to_bytes "p2b"
+Info: transacto: "hps_only_master" instantiated altera_avalon_packets_to_master "transacto"
+Info: b2p_adapter: Starting generation. 
+Info: b2p_adapter: "hps_only_master" instantiated channel_adapter "b2p_adapter"
+Info: p2b_adapter: Starting generation. 
+Info: p2b_adapter: "hps_only_master" instantiated channel_adapter "p2b_adapter"
+Info: hps_only_master_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "hps_only_master_master_translator"
+Info: hps_only_master_master_translator_avalon_universal_master_0_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "hps_only_master_master_translator_avalon_universal_master_0_agent"
+Info: hps_0_f2h_axi_slave_agent: "mm_interconnect_0" instantiated altera_merlin_axi_slave_ni "hps_0_f2h_axi_slave_agent"
+Info: Reusing file G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/soc_system/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: addr_router: "mm_interconnect_0" instantiated altera_merlin_router "addr_router"
+Info: id_router: "mm_interconnect_0" instantiated altera_merlin_router "id_router"
+Info: limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "limiter"
+Info: Reusing file G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/soc_system/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/soc_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_xbar_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info: cmd_xbar_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_xbar_mux"
+Info: rsp_xbar_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_xbar_demux"
+Info: rsp_xbar_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_xbar_mux"
+Info: Reusing file G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "width_adapter"
+Info: Reusing file G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/soc_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: crosser: "mm_interconnect_0" instantiated altera_avalon_st_handshake_clock_crosser "crosser"
+Info: Reusing file G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/soc_system/synthesis/submodules/altera_avalon_st_clock_crosser.v
+Info: Reusing file G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/soc_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: intr_capturer_0_avalon_slave_0_translator: "mm_interconnect_1" instantiated altera_merlin_slave_translator "intr_capturer_0_avalon_slave_0_translator"
+Info: intr_capturer_0_avalon_slave_0_translator_avalon_universal_slave_0_agent: "mm_interconnect_1" instantiated altera_merlin_slave_agent "intr_capturer_0_avalon_slave_0_translator_avalon_universal_slave_0_agent"
+Info: Reusing file G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/soc_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: addr_router: "mm_interconnect_1" instantiated altera_merlin_router "addr_router"
+Info: id_router: "mm_interconnect_1" instantiated altera_merlin_router "id_router"
+Info: cmd_xbar_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info: cmd_xbar_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_xbar_mux"
+Info: Reusing file G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_xbar_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_xbar_demux"
+Info: rsp_xbar_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_xbar_mux"
+Info: Reusing file G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: addr_router: "mm_interconnect_2" instantiated altera_merlin_router "addr_router"
+Info: addr_router_001: "mm_interconnect_2" instantiated altera_merlin_router "addr_router_001"
+Info: id_router: "mm_interconnect_2" instantiated altera_merlin_router "id_router"
+Info: id_router_001: "mm_interconnect_2" instantiated altera_merlin_router "id_router_001"
+Info: id_router_002: "mm_interconnect_2" instantiated altera_merlin_router "id_router_002"
+Info: burst_adapter: "mm_interconnect_2" instantiated altera_merlin_burst_adapter "burst_adapter"
+Info: Reusing file G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: cmd_xbar_demux: "mm_interconnect_2" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info: cmd_xbar_demux_001: "mm_interconnect_2" instantiated altera_merlin_demultiplexer "cmd_xbar_demux_001"
+Info: cmd_xbar_mux: "mm_interconnect_2" instantiated altera_merlin_multiplexer "cmd_xbar_mux"
+Info: Reusing file G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: cmd_xbar_mux_002: "mm_interconnect_2" instantiated altera_merlin_multiplexer "cmd_xbar_mux_002"
+Info: Reusing file G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_xbar_demux: "mm_interconnect_2" instantiated altera_merlin_demultiplexer "rsp_xbar_demux"
+Info: rsp_xbar_demux_002: "mm_interconnect_2" instantiated altera_merlin_demultiplexer "rsp_xbar_demux_002"
+Info: rsp_xbar_mux: "mm_interconnect_2" instantiated altera_merlin_multiplexer "rsp_xbar_mux"
+Info: Reusing file G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_xbar_mux_001: "mm_interconnect_2" instantiated altera_merlin_multiplexer "rsp_xbar_mux_001"
+Info: Reusing file G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: hps_0_h2f_lw_axi_master_agent: "mm_interconnect_3" instantiated altera_merlin_axi_master_ni "hps_0_h2f_lw_axi_master_agent"
+Info: Reusing file G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: addr_router: "mm_interconnect_3" instantiated altera_merlin_router "addr_router"
+Info: id_router: "mm_interconnect_3" instantiated altera_merlin_router "id_router"
+Info: cmd_xbar_demux: "mm_interconnect_3" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info: cmd_xbar_mux: "mm_interconnect_3" instantiated altera_merlin_multiplexer "cmd_xbar_mux"
+Info: Reusing file G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_xbar_demux: "mm_interconnect_3" instantiated altera_merlin_demultiplexer "rsp_xbar_demux"
+Info: rsp_xbar_mux: "mm_interconnect_3" instantiated altera_merlin_multiplexer "rsp_xbar_mux"
+Info: Reusing file G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: addr_router: "mm_interconnect_4" instantiated altera_merlin_router "addr_router"
+Info: addr_router_001: "mm_interconnect_4" instantiated altera_merlin_router "addr_router_001"
+Info: id_router: "mm_interconnect_4" instantiated altera_merlin_router "id_router"
+Info: id_router_002: "mm_interconnect_4" instantiated altera_merlin_router "id_router_002"
+Info: cmd_xbar_demux: "mm_interconnect_4" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info: cmd_xbar_demux_001: "mm_interconnect_4" instantiated altera_merlin_demultiplexer "cmd_xbar_demux_001"
+Info: cmd_xbar_mux: "mm_interconnect_4" instantiated altera_merlin_multiplexer "cmd_xbar_mux"
+Info: Reusing file G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: cmd_xbar_mux_002: "mm_interconnect_4" instantiated altera_merlin_multiplexer "cmd_xbar_mux_002"
+Info: Reusing file G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_xbar_demux: "mm_interconnect_4" instantiated altera_merlin_demultiplexer "rsp_xbar_demux"
+Info: rsp_xbar_demux_002: "mm_interconnect_4" instantiated altera_merlin_demultiplexer "rsp_xbar_demux_002"
+Info: rsp_xbar_mux: "mm_interconnect_4" instantiated altera_merlin_multiplexer "rsp_xbar_mux"
+Info: Reusing file G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_xbar_mux_001: "mm_interconnect_4" instantiated altera_merlin_multiplexer "rsp_xbar_mux_001"
+Info: Reusing file G:/Projekte/MCAPIforDE1-Soc/MCAPI_DE1-SoC_SoCs/NIOS_MCAPI_Base_v01/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: border: "hps_io" instantiated altera_interface_generator "border"
+Info: soc_system: Done "soc_system" with 87 modules, 171 files, 6328683 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

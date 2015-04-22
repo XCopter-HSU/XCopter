@@ -1,0 +1,11 @@
+create_driver CPU_FiFo_Bridge_driver
+set_sw_property hw_class_name CPU_FiFo_Bridge
+
+set_sw_property version 1.0
+set_sw_property min_compatible_hw_version 1.0
+
+add_sw_property supported_bsp_type hal
+add_sw_property supported_bsp_type UCOSII
+
+add_sw_property include_source inc/cpu_fifo_bridge_regs.h
+

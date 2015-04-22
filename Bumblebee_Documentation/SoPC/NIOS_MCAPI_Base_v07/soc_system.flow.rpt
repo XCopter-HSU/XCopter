@@ -1,0 +1,497 @@
+Flow report for soc_system
+Fri Dec 19 16:14:44 2014
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------+
+; Flow Summary                                                                 ;
++---------------------------------+--------------------------------------------+
+; Flow Status                     ; Successful - Fri Dec 19 16:10:40 2014      ;
+; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                   ; soc_system                                 ;
+; Top-level Entity Name           ; ghrd_top                                   ;
+; Family                          ; Cyclone V                                  ;
+; Device                          ; 5CSEMA5F31C6                               ;
+; Timing Models                   ; Preliminary                                ;
+; Logic utilization (in ALMs)     ; 6,576 / 32,070 ( 21 % )                    ;
+; Total registers                 ; 10858                                      ;
+; Total pins                      ; 368 / 457 ( 81 % )                         ;
+; Total virtual pins              ; 0                                          ;
+; Total block memory bits         ; 2,987,292 / 4,065,280 ( 73 % )             ;
+; Total DSP Blocks                ; 4 / 87 ( 5 % )                             ;
+; Total HSSI RX PCSs              ; 0                                          ;
+; Total HSSI PMA RX Deserializers ; 0                                          ;
+; Total HSSI TX PCSs              ; 0                                          ;
+; Total HSSI TX Channels          ; 0                                          ;
+; Total PLLs                      ; 3 / 6 ( 50 % )                             ;
+; Total DLLs                      ; 1 / 4 ( 25 % )                             ;
++---------------------------------+--------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 12/19/2014 15:58:16 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; soc_system          ;
++-------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                                ;
++---------------------------------------+--------------------------------------------------------------------------+---------------+-------------------------------------------------+------------+
+; Assignment Name                       ; Value                                                                    ; Default Value ; Entity Name                                     ; Section Id ;
++---------------------------------------+--------------------------------------------------------------------------+---------------+-------------------------------------------------+------------+
+; COMPILER_SIGNATURE_ID                 ; 128527091033021.141900109604420                                          ; --            ; --                                              ; --         ;
+; ECO_REGENERATE_REPORT                 ; On                                                                       ; Off           ; --                                              ; --         ;
+; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/alt_types.pre.h                ; --            ; soc_system_hps_0_hps_io_border                  ; --         ;
+; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/emif.pre.xml                   ; --            ; soc_system_hps_0_hps_io_border                  ; --         ;
+; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/sdram_io.pre.h                 ; --            ; soc_system_hps_0_hps_io_border                  ; --         ;
+; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/sequencer.pre.c                ; --            ; soc_system_hps_0_hps_io_border                  ; --         ;
+; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/sequencer.pre.h                ; --            ; soc_system_hps_0_hps_io_border                  ; --         ;
+; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/sequencer_auto.pre.h           ; --            ; soc_system_hps_0_hps_io_border                  ; --         ;
+; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/sequencer_auto_ac_init.pre.c   ; --            ; soc_system_hps_0_hps_io_border                  ; --         ;
+; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/sequencer_auto_inst_init.pre.c ; --            ; soc_system_hps_0_hps_io_border                  ; --         ;
+; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/sequencer_defines.pre.h        ; --            ; soc_system_hps_0_hps_io_border                  ; --         ;
+; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/system.pre.h                   ; --            ; soc_system_hps_0_hps_io_border                  ; --         ;
+; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/tclrpt.pre.c                   ; --            ; soc_system_hps_0_hps_io_border                  ; --         ;
+; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/tclrpt.pre.h                   ; --            ; soc_system_hps_0_hps_io_border                  ; --         ;
+; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/hps.pre.xml                              ; --            ; soc_system_hps_0_hps_io_border                  ; --         ;
+; HPS_PARTITION                         ; On                                                                       ; --            ; soc_system_hps_0_hps_io_border                  ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; altera_avalon_mm_clock_crossing_bridge          ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; altera_avalon_packets_to_master                 ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; altera_avalon_sc_fifo                           ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; altera_avalon_st_bytes_to_packets               ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; altera_avalon_st_handshake_clock_crosser        ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; altera_avalon_st_jtag_interface                 ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; altera_avalon_st_packets_to_bytes               ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; altera_irq_clock_crosser                        ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; altera_merlin_axi_master_ni                     ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; altera_merlin_axi_slave_ni                      ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; altera_merlin_burst_adapter                     ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; altera_merlin_master_agent                      ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; altera_merlin_master_translator                 ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; altera_merlin_slave_agent                       ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; altera_merlin_slave_translator                  ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; altera_merlin_traffic_limiter                   ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; altera_merlin_width_adapter                     ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; altera_reset_controller                         ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; intr_capturer                                   ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; --                                              ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_cpu_s0                               ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_cpu_s1                               ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_hps_0                                ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_hps_0_hps_io                         ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_hps_only_master                      ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_hps_only_master_b2p_adapter          ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_hps_only_master_p2b_adapter          ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_hps_only_master_timing_adt           ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_irq_mapper                           ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_irq_mapper_001                       ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_irq_mapper_002                       ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_irq_mapper_003                       ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_jtag_uart_cpu_s0                     ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_0                    ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_0_addr_router        ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_0_cmd_xbar_demux     ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_0_cmd_xbar_mux       ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_0_id_router          ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_0_rsp_xbar_demux     ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_0_rsp_xbar_mux       ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_1                    ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_1_addr_router        ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_1_cmd_xbar_demux     ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_1_cmd_xbar_mux       ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_1_id_router          ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_1_rsp_xbar_demux     ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_1_rsp_xbar_mux       ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_2                    ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_2_addr_router        ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_2_addr_router_001    ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_2_cmd_xbar_demux     ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_2_cmd_xbar_demux_001 ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_2_cmd_xbar_mux       ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_2_cmd_xbar_mux_002   ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_2_id_router          ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_2_id_router_002      ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_2_rsp_xbar_demux     ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_2_rsp_xbar_demux_002 ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_2_rsp_xbar_mux       ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_2_rsp_xbar_mux_001   ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_3                    ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_3_addr_router        ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_3_cmd_xbar_demux     ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_3_cmd_xbar_mux       ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_3_id_router          ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_3_rsp_xbar_demux     ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_3_rsp_xbar_mux       ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_4                    ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_4_addr_router        ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_4_addr_router_001    ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_4_cmd_xbar_demux     ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_4_cmd_xbar_demux_001 ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_4_cmd_xbar_mux       ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_4_cmd_xbar_mux_002   ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_4_id_router          ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_4_id_router_002      ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_4_rsp_xbar_demux     ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_4_rsp_xbar_demux_002 ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_4_rsp_xbar_mux       ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_4_rsp_xbar_mux_001   ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_5                    ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_5_addr_router        ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_5_cmd_xbar_demux     ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_5_cmd_xbar_mux       ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_5_cmd_xbar_mux_004   ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_5_id_router          ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_5_id_router_004      ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_5_rsp_xbar_demux     ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_5_rsp_xbar_demux_004 ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_5_rsp_xbar_mux       ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_6                    ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_6_addr_router        ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_6_cmd_xbar_demux     ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_6_cmd_xbar_mux       ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_6_id_router          ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_6_rsp_xbar_mux       ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_7                    ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_7_addr_router        ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_7_cmd_xbar_demux     ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_7_cmd_xbar_mux       ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_7_id_router          ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_7_rsp_xbar_demux     ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_mm_interconnect_7_rsp_xbar_mux       ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_onchip_sram                          ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_pio_aliveTest_cpu_s0                 ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_pwm_pll                              ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_sdram                                ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_sdram_pll                            ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_sysid_qsys                           ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_system_pll                           ; --         ;
+; IP_TOOL_ENV                           ; Qsys                                                                     ; --            ; soc_system_timer_cpu_s0                         ; --         ;
+; IP_TOOL_NAME                          ; In-System Sources and Probes                                             ; --            ; --                                              ; --         ;
+; IP_TOOL_NAME                          ; altera_avalon_mm_clock_crossing_bridge                                   ; --            ; altera_avalon_mm_clock_crossing_bridge          ; --         ;
+; IP_TOOL_NAME                          ; altera_avalon_packets_to_master                                          ; --            ; altera_avalon_packets_to_master                 ; --         ;
+; IP_TOOL_NAME                          ; altera_avalon_sc_fifo                                                    ; --            ; altera_avalon_sc_fifo                           ; --         ;
+; IP_TOOL_NAME                          ; altera_avalon_st_bytes_to_packets                                        ; --            ; altera_avalon_st_bytes_to_packets               ; --         ;
+; IP_TOOL_NAME                          ; altera_avalon_st_handshake_clock_crosser                                 ; --            ; altera_avalon_st_handshake_clock_crosser        ; --         ;
+; IP_TOOL_NAME                          ; altera_jtag_dc_streaming                                                 ; --            ; altera_avalon_st_jtag_interface                 ; --         ;
+; IP_TOOL_NAME                          ; altera_avalon_st_packets_to_bytes                                        ; --            ; altera_avalon_st_packets_to_bytes               ; --         ;
+; IP_TOOL_NAME                          ; altera_irq_clock_crosser                                                 ; --            ; altera_irq_clock_crosser                        ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_axi_master_ni                                              ; --            ; altera_merlin_axi_master_ni                     ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_axi_slave_ni                                               ; --            ; altera_merlin_axi_slave_ni                      ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_burst_adapter                                              ; --            ; altera_merlin_burst_adapter                     ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_master_agent                                               ; --            ; altera_merlin_master_agent                      ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_master_translator                                          ; --            ; altera_merlin_master_translator                 ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_slave_agent                                                ; --            ; altera_merlin_slave_agent                       ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_slave_translator                                           ; --            ; altera_merlin_slave_translator                  ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_traffic_limiter                                            ; --            ; altera_merlin_traffic_limiter                   ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_width_adapter                                              ; --            ; altera_merlin_width_adapter                     ; --         ;
+; IP_TOOL_NAME                          ; altera_reset_controller                                                  ; --            ; altera_reset_controller                         ; --         ;
+; IP_TOOL_NAME                          ; intr_capturer                                                            ; --            ; intr_capturer                                   ; --         ;
+; IP_TOOL_NAME                          ; Qsys                                                                     ; --            ; --                                              ; --         ;
+; IP_TOOL_NAME                          ; altera_nios2_qsys                                                        ; --            ; soc_system_cpu_s0                               ; --         ;
+; IP_TOOL_NAME                          ; altera_nios2_qsys                                                        ; --            ; soc_system_cpu_s1                               ; --         ;
+; IP_TOOL_NAME                          ; altera_hps                                                               ; --            ; soc_system_hps_0                                ; --         ;
+; IP_TOOL_NAME                          ; altera_hps_io                                                            ; --            ; soc_system_hps_0_hps_io                         ; --         ;
+; IP_TOOL_NAME                          ; altera_jtag_avalon_master                                                ; --            ; soc_system_hps_only_master                      ; --         ;
+; IP_TOOL_NAME                          ; channel_adapter                                                          ; --            ; soc_system_hps_only_master_b2p_adapter          ; --         ;
+; IP_TOOL_NAME                          ; channel_adapter                                                          ; --            ; soc_system_hps_only_master_p2b_adapter          ; --         ;
+; IP_TOOL_NAME                          ; timing_adapter                                                           ; --            ; soc_system_hps_only_master_timing_adt           ; --         ;
+; IP_TOOL_NAME                          ; altera_irq_mapper                                                        ; --            ; soc_system_irq_mapper                           ; --         ;
+; IP_TOOL_NAME                          ; altera_irq_mapper                                                        ; --            ; soc_system_irq_mapper_001                       ; --         ;
+; IP_TOOL_NAME                          ; altera_irq_mapper                                                        ; --            ; soc_system_irq_mapper_002                       ; --         ;
+; IP_TOOL_NAME                          ; altera_irq_mapper                                                        ; --            ; soc_system_irq_mapper_003                       ; --         ;
+; IP_TOOL_NAME                          ; altera_avalon_jtag_uart                                                  ; --            ; soc_system_jtag_uart_cpu_s0                     ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_interconnect_wrapper                                       ; --            ; soc_system_mm_interconnect_0                    ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_router                                                     ; --            ; soc_system_mm_interconnect_0_addr_router        ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_demultiplexer                                              ; --            ; soc_system_mm_interconnect_0_cmd_xbar_demux     ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_multiplexer                                                ; --            ; soc_system_mm_interconnect_0_cmd_xbar_mux       ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_router                                                     ; --            ; soc_system_mm_interconnect_0_id_router          ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_demultiplexer                                              ; --            ; soc_system_mm_interconnect_0_rsp_xbar_demux     ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_multiplexer                                                ; --            ; soc_system_mm_interconnect_0_rsp_xbar_mux       ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_interconnect_wrapper                                       ; --            ; soc_system_mm_interconnect_1                    ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_router                                                     ; --            ; soc_system_mm_interconnect_1_addr_router        ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_demultiplexer                                              ; --            ; soc_system_mm_interconnect_1_cmd_xbar_demux     ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_multiplexer                                                ; --            ; soc_system_mm_interconnect_1_cmd_xbar_mux       ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_router                                                     ; --            ; soc_system_mm_interconnect_1_id_router          ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_demultiplexer                                              ; --            ; soc_system_mm_interconnect_1_rsp_xbar_demux     ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_multiplexer                                                ; --            ; soc_system_mm_interconnect_1_rsp_xbar_mux       ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_interconnect_wrapper                                       ; --            ; soc_system_mm_interconnect_2                    ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_router                                                     ; --            ; soc_system_mm_interconnect_2_addr_router        ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_router                                                     ; --            ; soc_system_mm_interconnect_2_addr_router_001    ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_demultiplexer                                              ; --            ; soc_system_mm_interconnect_2_cmd_xbar_demux     ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_demultiplexer                                              ; --            ; soc_system_mm_interconnect_2_cmd_xbar_demux_001 ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_multiplexer                                                ; --            ; soc_system_mm_interconnect_2_cmd_xbar_mux       ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_multiplexer                                                ; --            ; soc_system_mm_interconnect_2_cmd_xbar_mux_002   ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_router                                                     ; --            ; soc_system_mm_interconnect_2_id_router          ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_router                                                     ; --            ; soc_system_mm_interconnect_2_id_router_002      ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_demultiplexer                                              ; --            ; soc_system_mm_interconnect_2_rsp_xbar_demux     ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_demultiplexer                                              ; --            ; soc_system_mm_interconnect_2_rsp_xbar_demux_002 ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_multiplexer                                                ; --            ; soc_system_mm_interconnect_2_rsp_xbar_mux       ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_multiplexer                                                ; --            ; soc_system_mm_interconnect_2_rsp_xbar_mux_001   ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_interconnect_wrapper                                       ; --            ; soc_system_mm_interconnect_3                    ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_router                                                     ; --            ; soc_system_mm_interconnect_3_addr_router        ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_demultiplexer                                              ; --            ; soc_system_mm_interconnect_3_cmd_xbar_demux     ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_multiplexer                                                ; --            ; soc_system_mm_interconnect_3_cmd_xbar_mux       ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_router                                                     ; --            ; soc_system_mm_interconnect_3_id_router          ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_demultiplexer                                              ; --            ; soc_system_mm_interconnect_3_rsp_xbar_demux     ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_multiplexer                                                ; --            ; soc_system_mm_interconnect_3_rsp_xbar_mux       ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_interconnect_wrapper                                       ; --            ; soc_system_mm_interconnect_4                    ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_router                                                     ; --            ; soc_system_mm_interconnect_4_addr_router        ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_router                                                     ; --            ; soc_system_mm_interconnect_4_addr_router_001    ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_demultiplexer                                              ; --            ; soc_system_mm_interconnect_4_cmd_xbar_demux     ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_demultiplexer                                              ; --            ; soc_system_mm_interconnect_4_cmd_xbar_demux_001 ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_multiplexer                                                ; --            ; soc_system_mm_interconnect_4_cmd_xbar_mux       ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_multiplexer                                                ; --            ; soc_system_mm_interconnect_4_cmd_xbar_mux_002   ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_router                                                     ; --            ; soc_system_mm_interconnect_4_id_router          ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_router                                                     ; --            ; soc_system_mm_interconnect_4_id_router_002      ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_demultiplexer                                              ; --            ; soc_system_mm_interconnect_4_rsp_xbar_demux     ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_demultiplexer                                              ; --            ; soc_system_mm_interconnect_4_rsp_xbar_demux_002 ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_multiplexer                                                ; --            ; soc_system_mm_interconnect_4_rsp_xbar_mux       ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_multiplexer                                                ; --            ; soc_system_mm_interconnect_4_rsp_xbar_mux_001   ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_interconnect_wrapper                                       ; --            ; soc_system_mm_interconnect_5                    ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_router                                                     ; --            ; soc_system_mm_interconnect_5_addr_router        ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_demultiplexer                                              ; --            ; soc_system_mm_interconnect_5_cmd_xbar_demux     ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_multiplexer                                                ; --            ; soc_system_mm_interconnect_5_cmd_xbar_mux       ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_multiplexer                                                ; --            ; soc_system_mm_interconnect_5_cmd_xbar_mux_004   ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_router                                                     ; --            ; soc_system_mm_interconnect_5_id_router          ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_router                                                     ; --            ; soc_system_mm_interconnect_5_id_router_004      ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_demultiplexer                                              ; --            ; soc_system_mm_interconnect_5_rsp_xbar_demux     ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_demultiplexer                                              ; --            ; soc_system_mm_interconnect_5_rsp_xbar_demux_004 ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_multiplexer                                                ; --            ; soc_system_mm_interconnect_5_rsp_xbar_mux       ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_interconnect_wrapper                                       ; --            ; soc_system_mm_interconnect_6                    ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_router                                                     ; --            ; soc_system_mm_interconnect_6_addr_router        ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_demultiplexer                                              ; --            ; soc_system_mm_interconnect_6_cmd_xbar_demux     ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_multiplexer                                                ; --            ; soc_system_mm_interconnect_6_cmd_xbar_mux       ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_router                                                     ; --            ; soc_system_mm_interconnect_6_id_router          ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_multiplexer                                                ; --            ; soc_system_mm_interconnect_6_rsp_xbar_mux       ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_interconnect_wrapper                                       ; --            ; soc_system_mm_interconnect_7                    ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_router                                                     ; --            ; soc_system_mm_interconnect_7_addr_router        ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_demultiplexer                                              ; --            ; soc_system_mm_interconnect_7_cmd_xbar_demux     ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_multiplexer                                                ; --            ; soc_system_mm_interconnect_7_cmd_xbar_mux       ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_router                                                     ; --            ; soc_system_mm_interconnect_7_id_router          ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_demultiplexer                                              ; --            ; soc_system_mm_interconnect_7_rsp_xbar_demux     ; --         ;
+; IP_TOOL_NAME                          ; altera_merlin_multiplexer                                                ; --            ; soc_system_mm_interconnect_7_rsp_xbar_mux       ; --         ;
+; IP_TOOL_NAME                          ; altera_avalon_onchip_memory2                                             ; --            ; soc_system_onchip_sram                          ; --         ;
+; IP_TOOL_NAME                          ; altera_avalon_pio                                                        ; --            ; soc_system_pio_aliveTest_cpu_s0                 ; --         ;
+; IP_TOOL_NAME                          ; altera_pll                                                               ; --            ; soc_system_pwm_pll                              ; --         ;
+; IP_TOOL_NAME                          ; altera_avalon_new_sdram_controller                                       ; --            ; soc_system_sdram                                ; --         ;
+; IP_TOOL_NAME                          ; altera_pll                                                               ; --            ; soc_system_sdram_pll                            ; --         ;
+; IP_TOOL_NAME                          ; altera_avalon_sysid_qsys                                                 ; --            ; soc_system_sysid_qsys                           ; --         ;
+; IP_TOOL_NAME                          ; altera_pll                                                               ; --            ; soc_system_system_pll                           ; --         ;
+; IP_TOOL_NAME                          ; altera_avalon_timer                                                      ; --            ; soc_system_timer_cpu_s0                         ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; --                                              ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; altera_avalon_mm_clock_crossing_bridge          ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; altera_avalon_packets_to_master                 ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; altera_avalon_sc_fifo                           ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; altera_avalon_st_bytes_to_packets               ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; altera_avalon_st_handshake_clock_crosser        ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; altera_avalon_st_jtag_interface                 ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; altera_avalon_st_packets_to_bytes               ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; altera_irq_clock_crosser                        ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; altera_merlin_axi_master_ni                     ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; altera_merlin_axi_slave_ni                      ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; altera_merlin_burst_adapter                     ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; altera_merlin_master_agent                      ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; altera_merlin_master_translator                 ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; altera_merlin_slave_agent                       ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; altera_merlin_slave_translator                  ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; altera_merlin_traffic_limiter                   ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; altera_merlin_width_adapter                     ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; altera_reset_controller                         ; --         ;
+; IP_TOOL_VERSION                       ; 100.99.98.97                                                             ; --            ; intr_capturer                                   ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; --                                              ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_cpu_s0                               ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_cpu_s1                               ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_hps_0                                ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_hps_0_hps_io                         ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_hps_only_master                      ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_hps_only_master_b2p_adapter          ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_hps_only_master_p2b_adapter          ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_hps_only_master_timing_adt           ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_irq_mapper                           ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_irq_mapper_001                       ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_irq_mapper_002                       ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_irq_mapper_003                       ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_jtag_uart_cpu_s0                     ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_0                    ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_0_addr_router        ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_0_cmd_xbar_demux     ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_0_cmd_xbar_mux       ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_0_id_router          ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_0_rsp_xbar_demux     ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_0_rsp_xbar_mux       ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_1                    ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_1_addr_router        ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_1_cmd_xbar_demux     ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_1_cmd_xbar_mux       ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_1_id_router          ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_1_rsp_xbar_demux     ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_1_rsp_xbar_mux       ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_2                    ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_2_addr_router        ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_2_addr_router_001    ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_2_cmd_xbar_demux     ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_2_cmd_xbar_demux_001 ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_2_cmd_xbar_mux       ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_2_cmd_xbar_mux_002   ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_2_id_router          ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_2_id_router_002      ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_2_rsp_xbar_demux     ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_2_rsp_xbar_demux_002 ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_2_rsp_xbar_mux       ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_2_rsp_xbar_mux_001   ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_3                    ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_3_addr_router        ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_3_cmd_xbar_demux     ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_3_cmd_xbar_mux       ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_3_id_router          ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_3_rsp_xbar_demux     ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_3_rsp_xbar_mux       ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_4                    ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_4_addr_router        ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_4_addr_router_001    ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_4_cmd_xbar_demux     ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_4_cmd_xbar_demux_001 ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_4_cmd_xbar_mux       ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_4_cmd_xbar_mux_002   ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_4_id_router          ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_4_id_router_002      ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_4_rsp_xbar_demux     ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_4_rsp_xbar_demux_002 ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_4_rsp_xbar_mux       ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_4_rsp_xbar_mux_001   ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_5                    ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_5_addr_router        ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_5_cmd_xbar_demux     ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_5_cmd_xbar_mux       ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_5_cmd_xbar_mux_004   ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_5_id_router          ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_5_id_router_004      ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_5_rsp_xbar_demux     ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_5_rsp_xbar_demux_004 ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_5_rsp_xbar_mux       ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_6                    ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_6_addr_router        ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_6_cmd_xbar_demux     ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_6_cmd_xbar_mux       ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_6_id_router          ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_6_rsp_xbar_mux       ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_7                    ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_7_addr_router        ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_7_cmd_xbar_demux     ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_7_cmd_xbar_mux       ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_7_id_router          ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_7_rsp_xbar_demux     ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_mm_interconnect_7_rsp_xbar_mux       ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_onchip_sram                          ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_pio_aliveTest_cpu_s0                 ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_pwm_pll                              ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_sdram                                ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_sdram_pll                            ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_sysid_qsys                           ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_system_pll                           ; --         ;
+; IP_TOOL_VERSION                       ; 13.1                                                                     ; --            ; soc_system_timer_cpu_s0                         ; --         ;
+; MISC_FILE                             ; ip/altsource_probe/hps_reset_bb.v                                        ; --            ; --                                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/../../soc_system.cmp                                ; --            ; --                                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/../../C                                             ; --            ; --                                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/soc_system_hps_0_hps.svd                            ; --            ; --                                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/../../soc_system.qsys                               ; --            ; --                                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/alt_types.pre.h                ; --            ; --                                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/emif.pre.xml                   ; --            ; --                                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/sdram_io.pre.h                 ; --            ; --                                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/sequencer.pre.c                ; --            ; --                                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/sequencer.pre.h                ; --            ; --                                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/sequencer_auto.pre.h           ; --            ; --                                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/sequencer_auto_ac_init.pre.c   ; --            ; --                                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/sequencer_auto_inst_init.pre.c ; --            ; --                                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/sequencer_defines.pre.h        ; --            ; --                                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/system.pre.h                   ; --            ; --                                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/tclrpt.pre.c                   ; --            ; --                                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/tclrpt.pre.h                   ; --            ; --                                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/submodules/hps.pre.xml                              ; --            ; --                                              ; --         ;
+; PARTITION_COLOR                       ; 16764057                                                                 ; --            ; ghrd_top                                        ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL   ; PLACEMENT_AND_ROUTING                                                    ; --            ; ghrd_top                                        ; Top        ;
+; PARTITION_NETLIST_TYPE                ; SOURCE                                                                   ; --            ; ghrd_top                                        ; Top        ;
+; SLD_FILE                              ; soc_system/synthesis/soc_system.regmap                                   ; --            ; --                                              ; --         ;
+; SLD_FILE                              ; soc_system/synthesis/soc_system.debuginfo                                ; --            ; --                                              ; --         ;
+; SLD_INFO                              ; QSYS_NAME soc_system HAS_SOPCINFO 1 GENERATION_ID 1419000801             ; --            ; --                                              ; --         ;
+; SOPCINFO_FILE                         ; soc_system/synthesis/../../soc_system.sopcinfo                           ; --            ; --                                              ; --         ;
+; SYNTHESIS_ONLY_QIP                    ; On                                                                       ; --            ; --                                              ; --         ;
+; TOP_LEVEL_ENTITY                      ; ghrd_top                                                                 ; soc_system    ; --                                              ; --         ;
+; USE_DLL_FREQUENCY_FOR_DQS_DELAY_CHAIN ; On                                                                       ; Off           ; --                                              ; --         ;
++---------------------------------------+--------------------------------------------------------------------------+---------------+-------------------------------------------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:01:47     ; 1.0                     ; 1129 MB             ; 00:01:41                           ;
+; Fitter                    ; 00:09:24     ; 1.0                     ; 2735 MB             ; 00:09:12                           ;
+; Assembler                 ; 00:00:43     ; 1.0                     ; 808 MB              ; 00:00:40                           ;
+; TimeQuest Timing Analyzer ; 00:04:00     ; 1.0                     ; 1631 MB             ; 00:03:07                           ;
+; Total                     ; 00:15:54     ; --                      ; --                  ; 00:14:40                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; LT-L420          ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LT-L420          ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LT-L420          ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LT-L420          ; Windows 7 ; 6.2        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off soc_system -c soc_system
+quartus_fit --read_settings_files=off --write_settings_files=off soc_system -c soc_system
+quartus_asm --read_settings_files=off --write_settings_files=off soc_system -c soc_system
+quartus_sta soc_system -c soc_system
+
+
+
