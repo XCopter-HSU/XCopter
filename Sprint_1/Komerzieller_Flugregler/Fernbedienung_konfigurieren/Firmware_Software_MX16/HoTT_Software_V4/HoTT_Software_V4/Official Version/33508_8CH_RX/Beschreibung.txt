@@ -1,0 +1,5 @@
+33508_gr_rx8_6a37_f9.bin	
+Bit 8 wird bei Failsafe nicht gesetzt. (Für Flybareless Systeme, bei denen Failsafe am Sender eingestellt werden soll)
+
+33508_FS_gr_rx8_6a37_f9.bin
+Bit 8 wird bei Failsafe gesetzt. (Offizielles SUMD Protokoll)
