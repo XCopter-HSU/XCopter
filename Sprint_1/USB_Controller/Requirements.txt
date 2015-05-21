@@ -1,0 +1,49 @@
+Requirements USB-Controller
+---------------------
+
+
+- have to be solderable
+
+- Driver for Linux
+
+- Data transfer rate: USB-Controller 2.0 Highspeed with 480 MBit/s
+
+- ULPI compatible
+
+- Quantity of I/O-Pins
+
+
+
+
+
+
+
+---------------------------------------------------
+Calculate data transfer rate for one Kinect:
+---------------------------------------------------
+---------------------------------------------------
+
+
+USB 2.0 Highspeed !netto! data transfer rate:
+---------------------------------------------------
+
+	35MB/s - 40MB/s
+
+
+
+
+Kinect data transfer rate:
+---------------------------------------------------
+
+www.openkinect.org/wiki/faq:
+
+Resolution 640 x 480:
+
+Depth camera:	12 MB/s
+Color camera:	9 MB/s
+
+				
+				
+				
+				
+				
