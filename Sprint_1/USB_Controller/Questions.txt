@@ -1,0 +1,14 @@
+Questions
+------------
+
+Kinect camera:
+
+	1. Needed resolution and fps of the camera? (Hr.Steiper)
+	2. Black and white or full color? (Hr. Steiper)
+	
+
+
+USB- Controller:
+
+	1. Which Pins do we have to use for a minimum configuration? (Hr. Strahnen)
+	
