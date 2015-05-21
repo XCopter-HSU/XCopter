@@ -1,0 +1,27 @@
+Anforderungen USB-Controller
+---------------------
+
+
+- Muss Lötbar sein
+
+- Treiber für Linux
+
+- Datenrate: USB-Controller 2.0 Highspeed mit 480 MBit/s
+
+- ULPI kompatibel
+
+- Anzahl der I/O-Pins
+
+
+Berechnung Datenrate pro Kinect:
+
+Laut MIcrosoft:
+
+Kinect benötigt 50% eines USB- Controllers
+
+-> USB 2.0 mit 480 MBit/s
+-> 480 / 8 = 60 MB/s
+
+50% = 30MB/s
+
+ 
