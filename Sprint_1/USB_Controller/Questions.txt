@@ -9,6 +9,5 @@ Kinect camera:
 
 
 USB- Controller:
-
 	1. Which Pins do we have to use for a minimum configuration? (Hr. Strahnen)
 	

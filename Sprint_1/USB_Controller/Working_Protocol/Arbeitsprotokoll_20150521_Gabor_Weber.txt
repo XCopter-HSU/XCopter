@@ -1,0 +1,16 @@
+Stephan Gabor, Thomas Weber
+9.5.2015
+
+Arbeitsbeginn: 	11:00
+Pause:			-
+Arbeitsende: 	13:00
+Insgesamt:		2h. x 2Std. = 4Std.
+
+Info:
+Auseinandersetzung mit der USB-Controller Problematik
+
+Erkenntnisse:
+Anforderungen an einen USB-Controller in Verbindung mit einem Kinect zusammengefasst.
+(-> Requirements.txt)
+Probleme:
+Anzahl der GPIOs reicht wahrscheinlich nicht aus.
