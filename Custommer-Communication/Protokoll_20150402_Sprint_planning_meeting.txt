@@ -1,0 +1,48 @@
+Sprint Planning Meeting 1 2015_04_01
+
+Vorweg: Lessons Learned aus dem letzten Semster
+1. Vorzeigbares Zeug produzieren !
+2. Was soll am Ende entstehen ? Der Weg ist nicht das Ziel. Das Ziel ist Ziel !
+
+Was will der Kunde:
+- Flug
+- 2 Kinect Sensoren
+- Autonomie
+- Lagehaltung
+- Dafür Hardware mit Anschluss der Sensorik
+- Verbindung zur Bodenstation (interface zu Open Source Lösung)
+- Software auf der elektronik selber zum laufen bringen (linux, treiber, interfaces verbinden)
+
+Ziel am Ende des Projekts:
+Am Ende des Projekts soll ein autonomer flugfähiger Hexacopter entstehen. 
+Um dieses Ziel zu erreichen muss die Hardware mit der Sensorik angeschlossen werden. 
+Der Hexacopter soll dazu in der Lage sein, seine Lage autonom halten zu können. 
+Die Steuerung erfolgt über eine Fernbedienung. 
+Daten der Sensoren sollen über eine Bodenstation ausgewertet werden können.
+Zwei Kinect Sensoren sollen Umgebungsdaten des Hexacopters auswerten.
+
+Was ist das Ziel bis zum Ende des Semesters:
+
+
+Was sind die Ziele der einzelnen Sprints:
+Sprint 1: (etwa drei Sätze)
+	-
+	-
+	-
+Sprint 2:...
+Sprint 3:...
+
+Offene Fragen: 
+- Wieviel Saft brauchen wir eigentlich ?
+	-- Prozis unter Vollast bringen und messen
+	-- rest auch messen
+- Die 3 Ampere aus der Doku sind Hahnebüchen. Wieviel brauchen wir ?
+- Diode oder OptoKopller -> Strahnen fragen
+
+
+Input von Herrn Steiper
+- Fernbedienung mit Summensignal (Summsignal ? ) z.B. Graupner mx16
+Die "Platine"
+- Auf der Platine brauchen wir irgendwas, was die Spannung misst
+- externe Stromversorgung, wenn nicht im Flugbetrieb gearbeitet wird
+- USB-Zeug

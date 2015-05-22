@@ -1,0 +1,32 @@
+Stephan Gabor, Daniel Maurus
+
+9.5.2015
+
+Arbeitsbeginn: 	10:15
+Pause:			12:15 - 13:00
+Arbeitsende: 	15:00
+Insgesamt:		4h x 2
+
+
+Info:
+Auseinandersetzung mit der USB-Controller Problematik (3,5h pro Person = 7h)
+Löten des Stromkabels für externe Spannungsversorgung (Task: XCOP-50 1h)
+insgesamt: 8h
+
+
+Erkenntnisse:
+"USB3300 is an USB transceiver with ULPI interface, and can be easily 
+interfaced to a FPGA. But be aware that the USB3300 only implements the 
+lower physical layer. Higher parts like framing, is still needed to be 
+done in the FPGA.
+
+You can buy IP Cores for that, or try to implement it your self, a huge 
+task even for someone with a lot of knowldege in FPGA design and USB 
+details."
+
+Gespräch mit Herrn Strahnen:
+Der Waveshare USB 3300 ist nur ein Transceiver. USB-Controller benötigt !
+Microcontroller mit Pins nach außen liegend suchen
+Linuxtreiber Pflicht
+Möglichst Schnittstelle zu ULPI-Interface, denn dann könnte man WaveShare nutzen
+8-16 Bit Bus

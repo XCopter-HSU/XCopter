@@ -1,0 +1,17 @@
+Sprint planning Meeting mit Herrn Strahnen 09.04.2015
+
+- XCopter als universelle Plattform, die mit verschiedenen Sensoren bestückt werden kann
+- (autonomes Fliegen ist nicht unbedingt ein fixes Ziel)
+- für Infos über die Spannungsversorgung die Bachelor-Arbeit von Herrn Seifert
+- Monitoringbodenstation soll die Sensordaten anzeigen und auswerten können
+	- Sensordaten über alternativkanal, also nicht über Fernbedienung empfangen
+
+//- Die 3.3 und 5 Volt Pins auf der XBA-Platine werden direkt vom DE1-Board abgegriffen,
+//  sie sollen aber vom Akku abgegriffen werden wenn das DE1-board an seine Grenzen kommt.
+
+- Fernbedienung: bekommen von Herrn Strahnen ein CT-Sonderheft mit dem Thema
+- eventuell Sicherheitsbeauftragten auswählen
+- Know-How Linux (Linuxchecker wählen) -> root Filesystem für Bibliotheken für Anwendungen
+	- Linuxrechner für übergeordnete Sensordatenverarbeitung
+- Wenn es an die Programmierung des eigenen Flugreglers geht nochmal mit Herrn Strahnen zusammensetzen
+- Zum USB-Controller die Bachelor-Arbeit von Herrn Seifert zu rate ziehen (altes Modell auf Lager)

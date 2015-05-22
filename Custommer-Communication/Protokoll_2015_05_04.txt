@@ -1,0 +1,25 @@
+Stephan Gabor, Daniel Maurus
+
+4.5.2015
+
+Arbeitsbeginn: 	10:00
+Pause:			12:30-13:00
+Arbeitsende: 	14:00
+Insgesamt:		3,5h x 2
+
+
+Info:
+Auseinandersetzung mit der USB-Controller Problematik (2,5h pro Person = 5h)
+Fertigstellung des Accu-Charger HOW-TOs (1h pro Person = 2h)
+
+Erkenntnisse:
+isp1761 hat mitlerweile einen Treiber für uCLinux
+Siehe: http://famschmid.net/uclinuxtutorial_nios.html#isp1761usbdriver
+USB-IP-Cores auf Open Cores erhältlich, funktionalität fraglich. Prüfung notwendig.
+
+Fragen:
+Was genau brauchen wir in Verbindung mit unseren USB-Host-Controllern (nur IP-Core, nur Treiber, neue Controller... ?)
+Würde vielleicht ein ULPI-Wrapper IP-Core ausreichen um bestehende USB-Platine zu verbinden ?
+Brauchen wir einen USB-Host IP-Core zusätzlich zu unserem externen USB-Host chip auf der USB-Platine ?
+Reichen die uCLinux Treiber für den ISP1761 (der Nachfolger des Chips, mit dem Herr Seifert gearbeitet hat)?
+Wie bekommen wir den Chip auf eine Platine, wenn der Chip passt (Platine inkl. Chip suchen ?) ?
