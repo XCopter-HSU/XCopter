@@ -10,4 +10,7 @@ Kinect camera:
 
 USB- Controller:
 	1. Which Pins do we have to use for a minimum configuration? (Hr. Strahnen)
+
 	
+IST DAS UMSONST ?
+https://www.synopsys.com/dw/ipdir.php?ds=dwc_usb_2_0_host_controller
