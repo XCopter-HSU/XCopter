@@ -1,0 +1,44 @@
+Sprint 1 Review 22.05.2015
+
+Stromversorgung:
+Steiper:
+- Für Stromversorgung eine Sicherung wegen Verpolung einbauen
+
+Flugkontroller:
+- Test mit kleineren Gummimoppen als Motordämpfer
+Steiper:
+- Vorteilhaft die Motoren direkt zu dämpfen
+- Flugtest in Staig versicherungstechnisch abklären (Dienstreise)
+	- Jemanden mit Erfahrung im Heliflug finden
+
+USB-Controller:
+Steiper:
+- Kinects für die Zusatzanwendung laufen beim Herrn Steiper auf einem I7 Quad
+- Kinects speisen an externe mitfliegenden Rechner daten 
+- Kann man den Aufwand zeitnah abschätzen ???
+
+Strahnen:
+- Linux Treiber KO-Kriterium
+- USB-Controller suchen die unterstützt werden
+- Controller Anbindung ans Arm Board (AVX-BUS)
+- GPIO-2x36 PINS über - Unterm Strich abzählen wieviele Pins pro leiste noch
+  übrig. Doku der Vorgänger abchecken.
+- SOPC-Aufwändig. Kombinatorische Logik und State-Machine.
+
+Board:
+Strahnen:
+- Frage wie es mit dem Board steht.
+
+		Kollisiomskontrolle:
+		Steiper:
+		- Konzept der Kollisionskontrolle angehen wichtig !
+			- Welche Sensorik ist geeignet ?
+			- Flugkontroller und Kollisionskontrolle sind zwei separate anwendungen.
+			- Obere Halbkugel des X-Copters abdecken
+			- Recherche und Aufbau könnten wir machen
+		->>>>> Allgemeiner Konsens ist, dass dieses Thema an einen externen weitergeleitet wird, der seine 
+		Bacherlorarbeit darüber schreibt.
+		- Steiper will wissen wie der zweite Echtzeitkern aussieht ?		
+
+Strahnen: - Aussage: SOPC ist soweit fertig. Interfaces für USB und Kollisionskontrolle müssen noch 
+rein, aber vorher müssen die Rahmenbedingungen abgesteckt werden.
