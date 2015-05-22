@@ -1,0 +1,49 @@
+Sprint 1 Review 22.05.2015 (8:30 - 10:00)
+
+Stromversorgung:
+Steiper:
+- Für Stromversorgung eine Sicherung und einen Verpolungschutz(?) einbauen
+
+Flugcontroller-Team:
+- Flugtest mit kleineren Gummimoppen als Dämpfer uter den Motoren.
+Steiper:
+- Vorteilhaft die Motoren direkt direkt anzuschließen und die Sensoren selber zu dämpfen.
+- Flugtest in Staig versicherungstechnisch abklären (Dienstreise)
+	- Jemanden mit Erfahrung im Heliflug finden
+
+USB-Controller:
+Steiper:
+- Die "Echtzeitauswertung" der Daten von den Kinects soll mithilfe eines externen mitfliegenden I7 
+  System erfolgen. Scheinbar schafft der I7 nur 13FPS pro Kinect. 
+- Frage: Kann man den Aufwand für die USB-Controlle zeitnah abschätzen ?
+
+Strahnen:
+- GPIO-2x36 (72) Pins übrig - abzählen wie viele Pins pro leiste noch
+  übrig. Doku der Vorgänger abchecken. -->> 1. KO-Kriterium <<--
+- Linux Treiber -> 2. KO-Kriterium <-
+- Herausfinden wie die Anzahl der Datenleitungen des USB-Controllers mit der Geschwindigkeit zusammen-
+  hängt (reichen vielleicht sogar 16 Datenleitungen ?)
+  
+- USB-Controller suchen die unterstützt werden (ISP 1362, ISP 1760, SAF 1761)
+- Controlleranbindung ans Arm Board (AVX-BUS) im SOPC 
+- SOPC-Aufwändig. Kombinatorische Logik und State-Machines.
+
+Board:
+Strahnen:
+- Frage wie es mit dem Board steht.
+
+		Kollisiomskontrolle:
+		Steiper:
+		- Konzept der Kollisionskontrolle angehen wichtig !
+			- Welche Sensorik ist geeignet ?
+			- Flugkontroller und Kollisionskontrolle sind zwei separate anwendungen.
+			- Obere Halbkugel des X-Copters abdecken
+			- Recherche und Aufbau könnten wir machen
+		->>>>> Allgemeiner Konsens ist, dass dieses Thema an einen externen weitergeleitet wird, der seine 
+		Bacherlorarbeit darüber schreibt.
+		- Steiper will wissen wie der zweite Echtzeitkern aussieht ?		
+
+Strahnen: 	-	Aussage: SOPC ist soweit fertig. Interfaces für USB und Kollisionskontrolle müssen noch 
+rein, aber vorher müssen die Rahmenbedingungen abgesteckt werden.
+			- Im Linux Image des Systems schauen, ob USB-Treiber für den Controller vorhanden sind.
+
