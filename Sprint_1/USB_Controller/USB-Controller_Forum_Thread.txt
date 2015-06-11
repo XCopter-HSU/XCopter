@@ -1,0 +1,380 @@
+USB-Controller Sprint 1 Forum-Kommunikation
+
+USB-High Speed Anbindung an ein FPGA-Entwicklungsboard
+Autor: Betatron Hammer (betatron_h)
+Datum: 08.05.2015 13:35
+Hallo liebe Mikrocontroller Community,
+
+im Rahmen eines Projekts möchte ich mein DE1-SoC-Board um zwei 
+zusätzliche USB Schnittstellen erweitern. Hierbei ist es wichtig, dass 
+es sich um zwei zusätzliche USB-Controller handelt, da an diese Kinects 
+angeschlossen werden sollen (jedes Kinect braucht einen eigenen 
+Controller). Auch wichtig ist, dass die Controller High-Speed USB 
+Geschwindigkeit bieten, da die Kinects mindestens 24 MB/s benötigen.
+
+Das bisherige SoPc-Design besteht aus dem ARM Prozessor und zwei NIOS II 
+Prozessoren die untereinander kommunizieren. Am Ende möchte ich dazu in 
+der Lage sein, die Bilddaten die die Kinects liefern mit dem ARM 
+auszuwerten. Die zwei NIOS sind für Echtzeitanwendungen.
+
+Das DE1-SoC Board ist integraler Bestandteil des Projekts und kann nicht 
+ausgetauscht werden.
+
+Folgende Fragen stellen sich mir:
+1. Gibt es sowas wie eine USB-Erweiterungsplatine, die meinen 
+Anforderungen entspricht und die USB-Controller Funktion übernehmen 
+kann, am besten mit einem Linux-Treiber ()?
+
+2. Ist es möglich die USB-Schnittstelle mit Open Source IP-Cores 
+(vielleicht in Verbindung mit einem "Waveshare ULPI USB3300") zu 
+realisieren? (kommerzielle sind zu teuer > 5000€)
+
+Für weitere Ideen bin ich gerne offen.
+
+MfG
+
+Stephan
+
+08.05.2015 13:36: Bearbeitet durch User
+Markierten Text zitieren Antwort
+Re: USB-High Speed Anbindung an ein FPGA-Entwicklungsboard
+Autor: Gustl Buheitel (-gb-)
+Datum: 08.05.2015 14:45
+Hallo, ich brauche vielleicht auch bald was halbwegs schnelles 
+einfaches. Werde mal den FT232H verwenden und gucken was das unter Linux 
+mit Python maximal schafft.
+
+Markierten Text zitieren Antwort
+Re: USB-High Speed Anbindung an ein FPGA-Entwicklungsboard
+Autor: Jürgen Schuhmacher (engineer)  Benutzerseite
+Datum: 08.05.2015 18:56
+Für den FPGA-Bereich wüsste ich das nicht, aber in der 
+UC-Eval-board-Welt gibt es einige Systeme mit USB-Controllern on board, 
+dazu gibt es EVAL-Mudule con Cypress zum Einstecken in einen Port.
+
+Wenn man den zweckentfremdet und am FPGA-Port platziert, bräuchte man 
+nur ein langes USB-Kabel. Vielleicht ist das eine Option.
+
+Oder Du stellst Die Verbindung über die darauf verbaute CPU her und 
+koppelst an den NIOS an. Ist aber bottle neck.
+
+Markierten Text zitieren Antwort
+Re: USB-High Speed Anbindung an ein FPGA-Entwicklungsboard
+Autor: Mh. M. (mhm)
+Datum: 09.05.2015 00:10
+Gustl Buheitel schrieb:
+> Hallo, ich brauche vielleicht auch bald was halbwegs schnelles
+> einfaches. Werde mal den FT232H verwenden und gucken was das unter Linux
+> mit Python maximal schafft.
+
+Naja aber der TO braucht was an seinem FPGA, das USB Host kann. Den 
+FT232H ans FPGA und du hast USB, welches als Device fungiert. Damit 
+kannst du vermutlich keine Kinect bedienen. Außerdem dürfte der FT232H 
+recht lahm sein (afaik 1-2 MBaud). Für einfaches USB Device am FPGA kann 
+ich den Cypress FX2 mit seinem Slave FIFO Interface empfehlen!
+
+@TO: Das hier könnte was für dich sein: 
+http://www.ftdichip.com/Products/ICs/FT313H.html
+
+09.05.2015 00:17: Bearbeitet durch User
+Markierten Text zitieren Antwort
+Re: USB-High Speed Anbindung an ein FPGA-Entwicklungsboard
+Autor: Strubi (Gast)
+Datum: 09.05.2015 09:38
+Was ist mit den FTDI Vinculum-Dingern? Die können Host, aber ob sie 
+schnell genug sind, keine Ahnung.
+
+Markierten Text zitieren Antwort
+Re: USB-High Speed Anbindung an ein FPGA-Entwicklungsboard
+Autor: Betatron Hammer (betatron_h)
+Datum: 09.05.2015 10:15
+Danke für die Antworten. Im Laufe des gestrigen Tages habe ich weitere 
+Informationen eingeholt und möchte ein kurzes Update zu meinen 
+Anforderungen machen.
+
+Momentan besitze ich zwei "Waveshare ULPI USB3300". Diese sind mit einer 
+ULPI-Schnittstelle an einer zusätzlichen externen Platine angebracht. 
+Diese Platine bietet diverse GPIOs die für diverse Signale benötigt 
+werden. Ich habe auch zwei GPIO-Reihen auf der externen Platine, die 
+jeweils 40 GPIOs bieten (das DE1-SoC Board hat diese auch).
+
+Jetzt habe ich mir überlegt, dass es gut in mein Design passen würde, 
+wenn ich auf die Platine zwei USB-Controller setzen könnte. Jeweils eine 
+für jeweils einen Waveshare.
+
+Als Anforderungen für den USB-Controller habe ich mir überlegt:
+
+- Sollte ULPI Schnittstelle haben (zum Anbinden der zwei WaveShares 
+USB-Transceiver)
+
+- Muss Pins nach außen liegen haben, da ich das Ding ansonsten nicht auf 
+die Platine löten kann.
+
+- da ich pro USB-Controller nur 40 GPIOs zur Kommunikation mit dem 
+DE1-SoC habe, sollte der Controller 8-16 Bit Adressbus haben (hoffe mal 
+das reicht für High Speed)
+
+- Auf dem ARM des DE1-SoC wird ein Linux laufen, d.h. Treiber für den 
+Controller wären auch wichtig
+
+Hoffe das macht die ganze Sache nicht zu speziell.
+
+Würde mich über Vorschläge freuen.
+
+Markierten Text zitieren Antwort
+Re: USB-High Speed Anbindung an ein FPGA-Entwicklungsboard
+Autor: Fitzebutze (Gast)
+Datum: 10.05.2015 10:32
+Betatron Hammer schrieb:
+> Jetzt habe ich mir überlegt, dass es gut in mein Design passen würde,
+> wenn ich auf die Platine zwei USB-Controller setzen könnte. Jeweils eine
+> für jeweils einen Waveshare.
+>
+
+Wie willst Du diese speziellen Controller anbinden?
+Der Gag an ULPI ist ja, dass es ein simples Interface zum FPGA 
+darstellt. D.h. Du brauchst das ULPI-IP im FPGA um mit dem Ding zu 
+quatschen.
+Ansonsten hast du pro USB eine Zweichip-Lösung, nur zum Interfacing. Da 
+ist ein Host-Chip mit FIFO von FTDI simpler anzusteuern. Das alleine ist 
+schon knifflig genug, um die volle Rate hinzukriegen.
+
+>
+> - Auf dem ARM des DE1-SoC wird ein Linux laufen, d.h. Treiber für den
+> Controller wären auch wichtig
+>
+
+Alles was non-standard ist unter Linux muss man typischerweise 
+selberschreiben oder anpassen. Ich denke aber, Du kannst Dir von der 
+Xilinx-Ecke etwas an Source betr. EHCI-ULPI-Controller borgen. Wird aber 
+ev. knifflig und Du brauchst auf jeden Fall einen brauchbaren 
+Hardware-Debugger, OpenOCD kannst Du vergessen.
+
+Markierten Text zitieren Antwort
+Re: USB-High Speed Anbindung an ein FPGA-Entwicklungsboard
+Autor: Betatron Hammer (betatron_h)
+Datum: 10.05.2015 10:49
+bin jerzt erstmal ne woche in russland. wenn ich zurück bin lass ich mir 
+das nochmal durch den kopf gehen.
+
+gaebe es eigentlich eine loesung die usb-controller und usb-transceiver 
+auf einer kleinen platine mit ulpi stecker bietet ?
+
+grueße
+
+Markierten Text zitieren Antwort
+Re: USB-High Speed Anbindung an ein FPGA-Entwicklungsboard
+Autor: chris (Gast)
+Datum: 10.05.2015 14:53
+Ft232H geht gut, 25 Mbytes/sec geht da locker Im fifo mode, aber nee, 
+python ist da ein no go, da muss es schon C oder ahnliches sein, und bei 
+mehr als 25 Mbytes/sec braucht es dann auch schon multi threading.
+
+Markierten Text zitieren Antwort
+Re: USB-High Speed Anbindung an ein FPGA-Entwicklungsboard
+Autor: Christian R. (supachris)
+Datum: 10.05.2015 15:13
+chris schrieb:
+> Ft232H geht gut, 25 Mbytes/sec geht da locker Im fifo mode, aber
+> nee, python ist da ein no go, da muss es schon C oder ahnliches sein,
+> und bei mehr als 25 Mbytes/sec braucht es dann auch schon multi
+> threading.
+
+Er braucht aber immer noch einen Host Controller um die Cinect(s) 
+anzuschließen.
+
+Markierten Text zitieren Antwort
+Re: USB-High Speed Anbindung an ein FPGA-Entwicklungsboard
+Autor: Betatron Hammer (betatron_h)
+Datum: 22.05.2015 13:12
+Bin zurück aus St. Petersburg und habe mich weiter mit dem Thema 
+beschäftigt.
+
+Ich habe den SAF1761BE von NXP 
+(http://www.nxp.com/products/automotive/multimedia/...) 
+gefunden. Der liefert die vollen 480MBit/s und ist in einer Form mit 128 
+Pins nach außen lieferbar. Laut Datenblatt hat der einen Transceiver 
+intern verbaut und braucht nur noch einen USB-Stecker der mit vier Pins 
+anzuschließen ist.
+
+Ein Problem ist natürlich noch der Anschluss an den FPGA über GPIOs. Ich 
+habe nur 2x36 GPIO-Pins insgesamt. Weiß vielleicht jemand wieviele Pins 
+man braucht, um das Gerät über GPIOs an einen FPGA anzuschließen ?
+
+Markierten Text zitieren Antwort
+Re: USB-High Speed Anbindung an ein FPGA-Entwicklungsboard
+Autor: Fitzebutze (Gast)
+Datum: 23.05.2015 12:45
+Moin,
+
+a) NXP in Verbindung mit Automotive ist schon mal gewagt. Bist du 
+sicher, dass du diesen Chip auch bekommst?
+
+b) Ein bisschen Hausaufgabe zur Ansteuerung musst du schon machen. Da 
+ist nix mit GPIO, sondern eher highspeed, vermutlich differentiell.
+
+Für einen Neustart kannst Du damit schon eine Entwicklungszeit von 3-4 
+Monaten rechnen.
+
+Markierten Text zitieren Antwort
+Re: USB-High Speed Anbindung an ein FPGA-Entwicklungsboard
+Autor: Jürgen Schuhmacher (engineer)  Benutzerseite
+Datum: 23.05.2015 14:16
+Fitzebutze schrieb:
+> Ein bisschen Hausaufgabe zur Ansteuerung musst du schon machen. Da
+> ist nix mit GPIO, sondern eher highspeed, vermutlich differentiell.
+
+Das ist aber nur ein Verdrahtungsproblem und sicher leistbar. Die Frage 
+ist, ob ihm damit nicht eventuell die Ports ausgehen, bei den wenigen 
+und dem Anspruch 2 Stück anschließen zu wollen. Im Schlimmsten Fall 
+müsste man differenziell mit allen verfügbaren Leitungen über einen 
+Stecker auf ein Erweiterungsboard und dort mit einem FPGA 
+transformieren, um an die USB Chips ranzukommen und auf das Protokoll zu 
+übersetzen und dann halt die Bandbreite hochdrehen.
+
+Gfs ist es aber auch leichter, auf diese Weise zwei PHYs anzubinden, die 
+entsprechend hoch angefahren werden können, und dann von Ethernet auf 
+USB zu gehen, wofür es Käufliches gibt. Braucht halt einen Soft MAC im 
+FPGA, was mehr Platz braucht.
+
+Markierten Text zitieren Antwort
+Re: USB-High Speed Anbindung an ein FPGA-Entwicklungsboard
+Autor: gg (Gast)
+Datum: 23.05.2015 14:23
+Betatron Hammer schrieb:
+> Ich habe den SAF1761BE von NXP gefunden.
+
+
+Der ist discontinued und nur noch bei Brokern verfügbar.
+
+Markierten Text zitieren Antwort
+Re: USB-High Speed Anbindung an ein FPGA-Entwicklungsboard
+Autor: Betatron Hammer (betatron_h)
+Datum: 23.05.2015 17:40
+gg schrieb:
+> Betatron Hammer schrieb:
+>> Ich habe den SAF1761BE von NXP gefunden.
+>
+> Der ist discontinued und nur noch bei Brokern verfügbar.
+
+Gibt es davon einen Nachfolger? Warum ist Automotive bei SAF mit 
+vorsicht zu genießen ? Mich würde es nicht sonderlich stören wenn der 
+Controller nicht Automotive-Konform wäre, aber schaden kanns ja nicht, 
+oder ?
+
+Discontinued würde mich jetzt auch nicht weiter stören sofern ich es 
+irgendwie ansteuern kann und es einen Linux Treiber gibt (selbst wenn 
+man den am Ende noch etwas anpassen müsste).
+
+Für den SAF1761BE sehe ich schon noch ein paar Bestellmöglichkeiten: 
+http://www.findchips.com/search/saf1761be
+
+Habe gerade noch den schon empfohlenen FT313H als alternative zum 
+SAF1761 mit in die Beobachtung gezogen 
+(http://www.ftdichip.com/Products/ICs/FT313H.html). Das gibt es als 64 
+Pin LQFP Package und es scheint auch High-Speed zu liefern. Da verwirren 
+mich jedoch die Busse. Das hat ein 16 Bit "Adress und Datenbus" und 
+nochmal 8 Bit "Adressbus". Bei den NXP Teilen waren Adress und Datenbus 
+immer getrennt...
+
+Wenn ich mir den Beitrag von Jürgen S. so durchlese grausts mich leicht 
+^^ dennoch danke für die Antwort.
+
+Markierten Text zitieren Antwort
+Re: USB-High Speed Anbindung an ein FPGA-Entwicklungsboard
+Autor: Fitzebutze (Gast)
+Datum: 24.05.2015 14:39
+Betatron Hammer schrieb:
+> gg schrieb:
+>> Betatron Hammer schrieb:
+>>> Ich habe den SAF1761BE von NXP gefunden.
+>>
+>> Der ist discontinued und nur noch bei Brokern verfügbar.
+>
+> Gibt es davon einen Nachfolger? Warum ist Automotive bei SAF mit
+> vorsicht zu genießen ? Mich würde es nicht sonderlich stören wenn der
+> Controller nicht Automotive-Konform wäre, aber schaden kanns ja nicht,
+> oder ?
+>
+
+Ansich nicht, aber Automotive gilt bei den meisten Herstellern als 
+"vertical market", heisst, die Chips werden für den Normalanwender nicht 
+rausgegeben, ausser, Du findest noch eine "Industrial"-Version. Wenn Du 
+da mal Support brauchst, oder der Chip eine "Anomalie" hat (was öfter 
+vorkommt), kriegst du normalerweise keine Antwort.
+
+
+> Discontinued würde mich jetzt auch nicht weiter stören sofern ich es
+> irgendwie ansteuern kann und es einen Linux Treiber gibt (selbst wenn
+> man den am Ende noch etwas anpassen müsste).
+>
+> Für den SAF1761BE sehe ich schon noch ein paar Bestellmöglichkeiten:
+> http://www.findchips.com/search/saf1761be
+>
+
+Das dürfte dich zu einem der chinesischen Broker geführt haben. Da musst 
+Du typischerweise einen ganzen Tray bestellen, davon können dann einige 
+oder alle Chips mal nicht funktionieren...
+
+Die Frage ist immer: Machst Du das Ding aus Spass anner Freud / für die 
+Forschung, oder kommerziell? Wenn Du nicht gleich auf 3-4 Sklaven 
+zurückgreifen kannst, und ersteres der Fall ist (wie ich mal annehme), 
+könnte die Entwicklung von einer robusten USB-Host-Kontrolle auf dem 
+FPGA SoC dich vom eigentlichen Ziel für einige Monate abbringen..
+
+Markierten Text zitieren Antwort
+Re: USB-High Speed Anbindung an ein FPGA-Entwicklungsboard
+Autor: Markus Wagner (Firma: Ingenieurbüro Wagner) (elektrowagi78)  Benutzerseite
+Datum: 03.06.2015 15:33
+Wie sieht nun Deine Lösung aus? Extra Chip?
+
+Markierten Text zitieren Antwort
+Re: USB-High Speed Anbindung an ein FPGA-Entwicklungsboard
+Autor: Betatron Hammer (betatron_h)
+Datum: 03.06.2015 17:31
+mir erscheint der FT313 chip 
+(http://www.ftdichip.com/Products/ICs/FT313H.html)
+aus mehreren Gründen sehr interessant:
+
+- Er besitzt ein flexibel konfigurierbares Interface zum Mikroprozessor
+   (in meinem Fall ARM). Das Interface dürfte im FPGA leicht 
+realisierbar,
+   bzw. konfigurierbar sein
+
+- Von FTDI wird ein Linux Treiber angeboten.
+
+- Es gibt ein Development-Board mit dem man schnell und einfach starten
+   könnte
+(http://www.ftdichip.com/Support/Documents/DataShee...)
+
+Was es abzuklären gilt ist:
+- Welches Interface zwischen ARM und FT313 chip soll konkret verwendet
+   werden und wieviele Pins benötigt man hierfür?
+- Was unterstützt der USB-Treiber alles, gibt es irgendwelche Klagen
+darüber, erfüllt er die Anforderungen der Cinect-Camera?
+
+Markierten Text zitieren Antwort
+Re: USB-High Speed Anbindung an ein FPGA-Entwicklungsboard
+Autor: Berater de Luxe (Gast)
+Datum: 03.06.2015 18:58
+Betatron Hammer schrieb:
+> Er besitzt ein flexibel konfigurierbares Interface zum Mikroprozessor
+>    (in meinem Fall ARM). Das Interface dürfte im FPGA leicht
+> realisierbar,
+>    bzw. konfigurierbar sein
+
+Soll der jetzt an den FPGA oder den ARM dran?
+
+Markierten Text zitieren Antwort
+Re: USB-High Speed Anbindung an ein FPGA-Entwicklungsboard
+Autor: Betatron Hammer (betatron_h)
+Datum: 04.06.2015 11:49
+im FPGA soll ein interface entstehen, dass die Brücke zwischen dem Arm 
+und dem USB-Controller bildet.
+
+Markierten Text zitieren Antwort
+Re: USB-High Speed Anbindung an ein FPGA-Entwicklungsboard
+Autor: M. Fritsch (Firma: embedded freelancer) (frimark)
+Datum: 06.06.2015 08:57
+Eigentlich müsste das nur in Leitungen bestehen, oder? Der ARM hat 
+meines Wissens einen USB-Port. Oder gilt das für den eingebtteten nicht?
