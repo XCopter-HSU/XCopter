@@ -1,0 +1,204 @@
+11.06.15  Sprint 2 - Planning Meeting 1
+*****************************************************************
+
+
+Kommerzieller Flugregler:
+#########################
+
++ Termin vereinbaren für Testflug 19.6 
+	
+	- Aufwandsschätzung: 2
+
+	-Termin mit Flugleiter und Prof vereinbaren
+	 um die Drohne zu testen 
+
+	Abnahmekriterien:
+		- Bestätigung und Terminvereinbarung (evtl per mail) von Profs
+
++Bus für die Fahrt organisieren
+
+	- Aufwandsschätzung: 3
+
+	-Bus für die Fahrt zum Modellflugplatzn in Staig organisieren
+
+	Offene Frage:
+		- Wie viel Leute wollen mit ?
+		- Versicherung ?
+		- können Leute privat fahren?
+	Abnahmekriterien:
+		- Buchungsbestätigung oder sonstige Bestätigung, dass wir den Busbekommen
+
+
++ Finale Einstellungen vor Testflug Testen
+
+	- Aufwandsschätzung: 3
+
+	- Vor dem Testflug sollten alle Einstellungen noch einmal verifiziert werden!
+
+	Offene Frage:
+		- hat Herr Kubat oder Herr Steiper evtl Einwände oder Vorschläge?
+	Abnahmekriterien:
+		- mit Herr Kubat oder Herr Steiper über die Konfigurationen gehen
+
++Testflug am 19.6
+
+	- Aufwandsschätzung: 5
+
+	- Testflug mit Team und Profs und herr Kubat auf dem MFC Staig
+
+	Offene Frage:
+		- Was und wie soll gestestet werden? 
+		- Flug Stabilität mit Dämpfer gegeben?
+	Abnahmekriterien:
+		- Zusammenfassung der Tests und deren Ergebnisse
+		- Dokumentation und Informationen über Flugverhalten in Betracht auf die Dämpfer -> auf Dämpfer achten!	
+		- tolle Bilder / Video vom ersten Flug
+
++ Landegestell bauen
+
+	- Aufwandsschätzung: 4
+
+	- Um zu verhindern, dass die Roteren bei einer schrägen Landung den Boden berühren, muss ein Ladegestell installiert werden
+
+	Offene Frage:
+		- aus Gewindestangen oder sonstige Materialien?
+		- Schwächen Löcher der evtl Gewindestange die Stabilität der Motorhalterungen?
+	Abnahmekriterien:
+		- Gestell ist sicher am XCopter verbaut
+
+
++ Schalter für Empfänger 
+
+	- Aufwandsschätzung: 2	
+
+	- Um zu verhindern, dass durch Stör- bzw Fehlsignale der XCopter unkontolliert reagier,
+	  muss ein Schalter zwischen Empfänger und Spannungsversorgung angebracht werden
+
+	Abnahmekriterien:
+		-Empfänger kann durch betätigen des Schalters ein- bzw ausgeschalten werden
+
++ Sicherung für Kommerziellen Flugregler einbauen
+
+	- Aufwandsschätzung: 2
+
+	- Damit bei einer Überspannung oder einem Kurzschluss, der Regler nicht kaputt geht wird eine sicherung eingebaut
+
+	Offene Frage:
+		-welche eigenschaften braucht die Sicherung
+	Abnahmekriterien:
+		-Flugregler nach Einbau voll funktionsfähig
+	
++ Fallback: Motoren ohne Dämpfer und Elektronik gedämpft
+
+	- Aufwandsschätzung: 3
+
+	- Nach dem Testflug werden Informationen über Dämpfer und Flugverhalten ausgewertet und entschieden ob oder welche Dämpfer noch verwendet werden sollen
+
+	Offene Frage:
+		- dämpfer alternativen?
+	Abnahmekriterien:
+		- kleines Ergebnisprotokoll
+
++ Backup der Konfiguration des komerziellen Flugreglers
+
+	- Aufwandsschätzung: 2
+
+	- die Konfiguration und Daten, die im Tool eingestellt wurden, werden für evtl wiederverwertung gesichert
+
+	Abnahmekriterien:
+		- Pfad zu den Backup Dateien 
+	
+
+
+
+Stabile Stromversorgung:
+########################
+
++ Platzierung des Spannungsregler auf platine oder board
+
+	- Aufwandsschätzung: 2
+
+	- der neue spannungsregler muss in das erweiterungsboard oder direkt auf den XCopter integriert werden
+
+	Offene Frage:
+		- Wo und wie wird er befestigt? 
+		- wie sieht das board im endeffekt dann aus?
+		- evlt eigner platz (nicht auf board)
+		
+	Abnahmekriterien:
+		- gute befestigung und platz des Reglers
+
+
+
+Simpler Flugregler:	
+###################
+
++ Information sammeln über Treiber etc.
+
+	- Aufwandsschätzung: 5
+
+	-Es müssen Informationen über vorhande bzw. nicht vorhandene Treiber gesammelt und zusammen getragen werden
+	
+	Offene Frage:
+		- welche Treiber gibt es?
+		- wie funktioneren treiber?
+		- gibt es dokumentationen bzw API
+		
+	Abnahmekriterien:
+		- Ergebnis Protokoll mit allen relevanten Infos
+		- Ordnerstruktur anlegen mit benötigten Treibern
+
+
++ Information sammeln über Flugregler und Doku
+
+	- Aufwandsschätzung: 5
+
+	-Es müssen Informationen gesammelt und zusammen getragen werden, wie ein Flugregler bzw eine Steuerung funktionert und welche Anforderungen es gibt
+	
+	Offene Frage:
+		- welche Arten von Steuerungen gibt es?
+		- welche ist für uns relevant?
+		- wird zusatz Hard oder Software benötigt?
+		
+	Abnahmekriterien:
+		- Ergebnis Protokoll mit allen relevanten Infos
+		- Ordnerstruktur anlegen mit benötigten Treibern
+
++ Information über PID Relger
+
+
+	- Aufwandsschätzung: 5
+
+	-es müssen Infos gesammelt werden, wie ein PID regler im allgemeinen und dann in unserem speziellen Fall funktioniert
+			
+	Abnahmekriterien:
+		- Ergebnis Protokoll mit allen relevanten Infos
+
+	
++ Komponenten eines Flugreglers aufzeigen
+
+	- Aufwandsschätzung: 4
+
+	- es muss festgestellet werden, welche Komponenten benötigt werden und wie bzw was sie untereinander kommunizieren.
+	Es soll ein Überblick über das System entstehen
+
+	Abnahmekriterien:
+		- Klassen bzw. Komponenten oder Blockdiagramm zur veranschaulichung
+	
++ Domänen Model
+
+	- Aufwandsschätzung: 4
+
+	- zur Festlegung einer einheitlichen Ausdrucksweise, wird ein Domänenmodell erstellt
+	
+	Abnahmekriterien:
+		- Domänenmodell als Klassendiagramm  oder sonstiges übersichtliches Schaubild
+	
+
+
+USB-Controller: // TODO Stefan Daniel THOMAS
+###############
+
++Prüfen des ausgesuchen USB-Controllers
+
+ 
