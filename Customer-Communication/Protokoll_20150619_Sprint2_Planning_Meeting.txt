@@ -1,0 +1,22 @@
+Kommunikation mit Herrn Steiper:
+
+Präsentation der User-Stories und Tasks für den 2. Sprint
+
+USB-Controller: Daten über Ethernet an externes Datenverarbeitungssystem (i7) schleusen,
+				keine Echtzeitberechnung auf dem ARM durchführen.
+				
+Allgemeines: 	- 	Steiper schlägt eine Crunch-Woche in den Ferien vor. Da sollten sich die
+					Teams vorher noch synchronisieren (eine Woche vor Vorlesungsbeginn ?). Speziell
+					sollte festgelegt werden was genau in den Ferien gemacht werden soll.
+				-	Steiper findet unsere Zeitschätzungen etwas knapp.
+				- 	Eine fertige Software für die Bodenstation ist vorhanden -> qgroundcontrol.org
+					Diese kann genutzt werden, man muss sich jedoch mit den Datenformaten beschäftigen 
+					(durch die Internetseite "durchfräsen").
+				-	Pixhawk Forum und Internetseite zu rate ziehen für Informationen zu 
+					dem	simplen Flugkontroller, speziell darüber wie man Daten einbindet.
+				-	px4Flow: Kamera auf Boden gerichtet. Damit kann man den Flugweg berechnen.
+					Kann direkt an den Pixhawk angeschlossen werden. Relevant für Positionsbestimmung
+					in Räumen. Bräuchte noch einen USB-Steckplatz (-_-)
+				-	TCP-Verbindung wird auch benötigt werden (USER STORY ?), Bodenstation ist über
+					einen UDP Client ansprechbar. Der Arm soll über serielle Schnittstelle (PPP)
+					kommunizieren -> Socket-Kommunikation.
