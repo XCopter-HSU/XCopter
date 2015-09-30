@@ -1,0 +1,29 @@
+		HowTo: Setting a static MAC-Address on DE1-SoC
+	***************************************************
+
+To connect the DE1-SoC board to the local University Network, a static MAC-Address
+is needed as the board is setting new random MAC adresses with every reset.
+The network config can be found in
+
+	/etc/network/interfaces
+
+Change the eth0 arguments from
+
+	iface eth0 inet dhcp 
+
+to
+
+	iface eth0 inet static                     
+        address 1.1.1.2                    
+        netmask 255.255.255.0              
+        network 1.1.1.255                  
+        broadcast 1.1.1.255                
+        gateway 1.1.1.1                    
+        dns-nameservers 1.1.1.1            
+        dns-search .com        
+        hwaddress ether 00:01:04:1b:2C:1F (enter your OWN network information don't just copy this!)
+
+Change the IPs to your new distributed IP address.
+
+	
+
