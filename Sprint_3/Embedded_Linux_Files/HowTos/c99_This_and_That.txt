@@ -1,0 +1,60 @@
+              This and That
+              =============
+             (2015-02-18 - ms)
+
+1. Working with CISCO-Any-Connect
+   ==============================
+   If you are working in your home office and you want to have
+   access to HS-Ulm intranet using a windows computer together
+   with Cisco-anyconnect-client software the following procedure
+   might help:
+   Start windows explorer (important: not mozilla firefox or
+   chrome browser, it MUST be windows explorer) and call the
+   following side: https://rz-asa.hs-ulm.de
+   
+   After successfull login the connection should be installed
+   automatically.
+   
+2. Programming EPCQ Device
+   =======================
+   The EPCQ device is used to store the hardware design which
+   should be automatically loaded after reset of after switching
+   on the DE1-SoC board.
+   The following procedure to program a successfully compiled
+   QSYS/Quartus design into EPCQ device is based on the instructions
+   in DE1-SoC user's manual (Chapter 8).
+   
+   - Assumption:
+     The FPGA should be set to AS x4 mode i.e. MSEL[4..0] = “10010” 
+	 to use the quad Flash as a FPGA configuration device.
+	 
+   - Convert .sof file to .jic file:
+     - In Quartus choose: File > Convert Programming Files ...
+	 - Please make the following adjustments:
+	   - Programming file type:      JTAG Indirect Configuration File (.jic)
+	   - Configuration device field: EPCQ256
+	   - Model field:                Active Serial x4
+	   - File name field:            specify an output file name
+	 - In section 'Input files to convert' click on 'SOF data' and
+	   then click 'Add File'
+	 - Select the desired .sof file and click 'Open'
+	 - Click on 'Flash Loader' and then click 'Add Device ...'
+	 - Select:
+	   - Device family: Cyclone V
+	   - Device name:   5CSEMA5
+	 - Click 'OK'
+     - Back on 'Convert Programming Files' page click the 'Generate'
+       button
+	 
+   - Write the JIC file into the EPCQ device:
+     - call the Quartus II programmer (Tools > Programmer)
+	 - delete all entries in programmer's main window (if any)
+	 - click 'auto detect' and select '5CSEMA5' device
+	 - double click the 'File' section corresponding to '5CSEMA5' 
+	   device in the main window.
+	   In the now appearing 'Select New Programming File' window
+	   select the .jic file
+	 - Don't forget to click the 'Program/Configure' box corresponding
+	   to the EPCQ device before clicking the 'Start' button.
+	   
+	 

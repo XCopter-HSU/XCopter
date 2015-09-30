@@ -1,0 +1,26 @@
+              HPS Application Development Hints
+              =================================
+                     (2015-05-01 - ms)
+
+For translating C/C++ application programs you should use the
+toolchain generated with buildroot, which is located in:
+  ~/DE1-SoC/buildroot-2014.08/output/host/usr/bin
+
+In order to be able to use this toolchain you should extend
+the path variable of your development system with:
+
+  export PATH=$PATH:~/DE1-SoC/buildroot-2014.08/output/host/usr/bin
+
+make has to know where system specific libraries and include
+files are stored. You therefore should include the following
+macros at the beginning of your makefile:
+
+#--------------------------------------------------------------
+SYSROOT:=~/DE1-SoC/buildroot-2014.08/output/host/usr/arm-buildroot-linux-uclibcgnueabihf/sysroot
+CROSS_COMPILE:=arm-buildroot-linux-uclibcgnueabihf-
+
+CFLAGS=--sysroot $(SYSROOT) -g -Wall	# -static
+LDLIBS=-lrt
+CC=$(CROSS_COMPILE)gcc
+#--------------------------------------------------------------
+

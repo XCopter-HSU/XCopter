@@ -1,0 +1,46 @@
+              NIOS SBT based software development
+              ===================================
+                     (2015-02-18 - ms)
+
+1. Overview
+   ========
+   This documents describes how software development for a
+   NIOS II cpu takes place when using NIOS II SBT (software
+   build tools) from Altera.
+   We assume that the NIOS II SBT tools are installed on a
+   Windows based computer system. Furthermore you must
+   have terminal based access to the HPS which runs linux
+   operating system. Furthermore 'niosboot' and/or 'niosreset'
+   tools must be available on the HPS linux system.
+   
+   Last but not least DE1-SoC_MP-NIOS_Base_v01 SoPC should
+   be installed. With this SoPC both cpu_s0 and cpu_s1 are
+   in reset state.
+   
+2. NIOS SBT Project Setup
+   ======================
+   Here we could describe how to up a uC/OS-II based project
+   or an Altera-HAL based project
+
+3. Software Execution or Debugging
+   ===============================
+   If your software successfully compiles you may want to
+   execute or debug it directly on the target. If you try to
+   do this NIOS SBT will report an error. This is because
+   the cpu_s0 and/or cpu_s1 are in reset state. You have to
+   release the cpu(s) from reset state using niosboot or
+   niosreset tool.
+   With:
+      ./niosboot AliveTest_for_cpu_s0.hex 0
+	  or with:
+	  ./niosreset OFF 0
+	  cpu_s0 will be released from reset.
+   With:
+	  ./niosboot AliveTest_for_cpu_s1.hex 1
+	  or with:
+	  ./niosreset OFF 1
+	  cpu_s1 will be released from reset.
+
+   Now execution or debugging of your NIOS II software 
+   should work.
+   

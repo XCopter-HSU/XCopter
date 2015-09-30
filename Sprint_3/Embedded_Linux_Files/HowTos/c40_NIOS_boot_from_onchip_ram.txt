@@ -1,0 +1,22 @@
+         NIOS II Boot from on-chip memory
+         ================================
+                  (2015-01-20 - ms)
+
+Start NIOS II SBT, setup and debug the software you want to install
+in on-chip memory as boot software. To generate the therefore necessary
+memory initialization file, perform the following steps:
+1. Right-click the application project.
+2. Point to 'Make targets' and click 'Build' to open the
+   'Make Targets' dialog box.
+3. Select 'mem_init_generate'.
+4. Click 'Build'.
+   The makefile generates a separate file (or files) for each memory
+   device. It also generates a Quartus II IP File (.qip). The .qip
+   file tells the Quartus II software where to find the initialization 
+   files. The generated .qip file could be found in:
+   <software-project-folder>/mem_init
+5. Add the .qip file to your Quartus II project.
+   In Quartus:
+       Project -> Add/Remove Files in Project...
+6. Recompile your Quartus II project
+

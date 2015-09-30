@@ -1,0 +1,350 @@
+     _______________________________________________
+     |           Buildroot-based Linux             |
+     |    for Alteras DE1-SoC Development Boards   |
+     |                                             |
+     |          - Installation Hints -             |
+     |            (20.05.2015 - ms)                |
+     |_____________________________________________|
+
+
+   Contents:
+   =========
+      1. Assumptions
+      2. Buildroot Installation and Application
+      3. SD card Installation
+      4. Establish a USB/UART terminal session
+      5. System individualization
+      6. Install Altera's Embedded Design Suite
+      7. u-boot Configuration
+      8. References
+      9. ToDo
+
+-----------------------------------------------------------------------------
+1. Assumptions
+   ===========
+   You are working with an Ubuntu 12.04 64-bit VM which was set up
+   according to the instructions given in 'c11_DE1-SoC_UbuntuVM.txt'.
+   Parts of the following description are taken from documents you could
+   find on [1]. Additional hints have been found in [3].
+
+-----------------------------------------------------------------------------
+2. Buildroot Installation and Application
+   ======================================
+   Download buildroot software with:
+     wget http://buildroot.uclibc.org/downloads/buildroot-2014.08.tar.gz
+   
+   Unpack buildroot-2014.08.tar.gz
+   -> the new folder buildroot-2014.08 will contain all files to generate
+      a new uboot bootloader, linux image file, root file system, cross-
+      compile toolchain, etc.
+
+   Select configuration for Altera Sockit board, which will also
+   be ok for DE1-SoC board.
+     cd ~/DE1-SoC/buildroot-2014.08
+     make altera_sockit_defconfig
+
+   Configure buildroot:
+     cd ~/DE1-SoC/buildroot-2014.08
+     make menuconfig
+     - in 'Toolchain -->' select: Linux 3.10.x kernel headers
+     - in 'System configuration':
+       - change 'System banner' to: "Welcome to Bumblebee (socfpga-3.10-ltsi-rt)"
+     - in 'Kernel -->':
+       - change 'Custom repository version' to "socfpga-3.10-ltsi-rt"
+       - change 'Device Tree Source file names' to "socfpga_cyclone5"
+     - in 'Target packages -->':
+       - in 'Networking applications -->' select:
+         - 'openssh'
+         - 'ntp' (set network time and date, because otherwise
+                  scp will not work. It will continuously ask you 
+                  change the password because it has despired.
+                  The reason for that is that target's date/time 
+                  is set to 1970, because there is no RTC)
+   
+   Generate all system components with:
+     cd ~/DE1-SoC/buildroot-2014.08
+     make        (Depending on the speed of your computer this
+                  make might execute for some hours.)
+
+   Execution of this 'first' make may end up with an error
+   related to a none existing file socfpga_cylone5_sockit.dtb.
+   Your could get rid of this error by editing buildroot's
+   postprocessing script
+   
+     buildroot-2014.08/board/altera/sockit/post-image.sh
+	 
+   Replace socfpga_cyclone5_sockit.dtb with socfpga_cyclone5.dtb.
+   Now make should successfully finish.
+   
+   After this first 'make' has successfully been executed, you 
+   could now configure the linux kernel, if necessary, with:
+     cd ~/DE1-SoC/buildroot-2014.08   
+     make linux-menuconfig
+     make
+
+   In directory buildroot-2014.08/output/images you should now
+   find the following files, required to produce a valid SD card:
+
+    rootfs.ext2      // root file system
+    socfpga.dtb      // device tree blob
+    u-boot.img       // u-boot bootloader image
+    u-boot-spl.bin   // second stage bootloader which
+                     // has to load u-boot
+    uImage           // uncompressed linux image
+
+   The first stage bootloader which is stored in SoCs ROM
+   expects a 'signed' second stage bootloader, i. e. we have
+   to produce a signed version of u-boot-spl.bin. Therefore
+   we need a tool called 'mkpimage' which is part of Altera's
+   embedded design suite. Accordingly we first have to install
+   Altera's EDS as given in chapter 6.
+   Now start Altera's EDS SoCEDS with:
+     /opt/altera/14.1/embedded/embedded_command_shell.sh
+   
+   and sign second stage bootloader:
+     cd ~DE1-SoC/buildroot-2014.08/output/images
+     /opt/altera/14.1/embedded/host_tools/altera/mkpimage/mkpimage -hv 0 u-boot-spl.bin -o u-boot-spl-signed.bin
+
+   Now directory output/images should contain the signed second
+   stage bootloader file 'u-boot-spl-signed.bin'.
+
+   Generate a new SD card according to chapter 3. It hopefully
+   should work without any problem. If wanted, you can now
+   individualize your system according to the instructions
+   given in chapter 4.
+
+   In summary buildroot supports the following targets:
+
+    cd ~DE1-SoC/buildroot-2014.08
+    make menuconfig           // configure buildroot
+    make busybox-menuconfig   // configure busybox
+    make uclibc-menuconfig    // configure uclibc
+    make linux-menuconfig     // configure linux kernel
+    make toolchain            // generates the toolchain
+    make clean
+    make                      // make everything
+
+---------------------------------------------------------------
+3. SD card Installation
+   ====================
+   The following procedure to produce a bootable SD card for 
+   DE1-SoC board is based on the description found in [2].
+   
+   First you have to determine the device associated to the SD 
+   card. Therefore you should execute:
+     lsblk      (or cat /proc/partitions)
+	 
+   before AND after SD card has been inserted into your PC. By
+   inspecting the outputs you could find out device's name. 
+   Let's assume it is /dev/sdx.
+
+   First we have to change SD card's partition table with:
+
+     sudo fdisk /dev/sdx
+
+   (I'm not really sure about the following hint:
+   To author's experience partitioning will not work
+   if it is done with linux running in a VM. Therefore you 
+   should use a 'native' linux, i. e. a linux which is not 
+   running in a VM for the partitioning job.)
+
+   First delete all previous partitions with 'd' (followed by
+   the corresponding partition number) and then create the new
+   partition table, using these options, pressing enter after 
+   each one:
+
+     n p 1 9000000 9041919 t 1 b
+     n p 2 4096 8996863 t 2 83
+     n p 3 2048 4095 t 3 a2
+
+   Using the 'p' option, SD card's partitions must look like
+   this :
+
+     Device        Start       End  Blocks  Id  System
+     /dev/sdx1   9000000   9041919   20960   b  W95 FAT32
+     /dev/sdx2      4096   8996863 4496384  83  Linux
+     /dev/sdx3      2048      4095    1024  a2  Unknown
+
+   Then write the partition table using 'w' and exit fdisk.
+
+   Next we have to make partition sdb1 a DOS partition with:
+   
+     sudo mkdosfs /dev/sdx1
+
+   After that SD card is prepared and we could now install
+   the boot loader, the OS image and the root file system.
+   
+   A) Install boot loader files
+      HPS has a first stage boot loader located in its internal
+      ROM, which will scan the partition with id = a2 for the
+      next stage bootloaders. So we must write the signed
+      preloader binary, which contains the second stage boot
+      loader, and the u-boot binary, which contains the final
+      boot loader, in that partition. The therefore needed
+      binaries could be found in buildroot's subfolder
+      output/images.
+	  
+        cd ~/DE1-SoC/buildroot-2014.08/output/images
+        sudo dd if=u-boot-spl-signed.bin of=/dev/sdx3 bs=64k seek=0
+        sudo dd if=u-boot.img of=/dev/sdx3 bs=64k seek=4
+        sudo sync
+		
+      Hint: Normally boot loader has to be installed only once
+      and not any time the linux image or the root fs has been
+      changed.
+	  
+   B) Install the linux OS image:
+      In order to install the linux OS you have to copy the 
+      uncompressed linux kernel image and the associated device
+      tree file into partition /dev/sdx1:
+
+        cd ~/DE1-SoC/buildroot-2014.08/output/images
+        sudo mkdir /mnt/sdcardp1
+        sudo mount /dev/sdx1 /mnt/sdcardp1
+        sudo cp socfpga.dtb uImage /mnt/sdcardp1
+        sudo umount /mnt/sdcardp1
+        sudo sync
+
+   C) Install root file system:
+      Root file system has to be installed in partition /dev/sdx2:
+	  
+        cd ~/DE1-SoC/buildroot-2014.08/output/images 
+        sudo dd if=rootfs.ext2 of=/dev/sdx2 bs=64k
+        sudo sync
+
+		Hint: Normally update of file 'interfaces' will be done
+		      in post-build.sh script. Therefore following
+			  instructions are only necessary in case of a
+			  missing, valid post-build.sh script file.
+        Any time you have updated the root fs you have to 
+        reinstall the manually changed 'interfaces' file.
+        Unfortunately in the original interfaces file, ethernet
+        interface and dhcp service will not be started 
+        automatically.
+        If you have stored a copy of that file in buildroot's
+        subfolder ms_files, than you have to:
+		
+          cd ~/DE1-SoC/buildroot-2014.08/ms_files
+          sudo mkdir /mnt/sdcardp2
+          sudo mount /dev/sdx2 /mnt/sdcardp2
+          sudo cp interfaces /mnt/sdcardp2/etc/network
+          sudo umount /mnt/sdcardp2
+          sudo sync
+		
+   Hint: Each of the three parts, boot loader, kernel image or
+   root fs could be updated independent of the other parts.
+   I. e., if only root fs has been changed by e. g. inclusion
+   of a new target package, only partition /dev/sdb2 has to be
+   updated according to the procedure described in C).
+
+---------------------------------------------------------------
+4. Establish a USB/UART terminal session
+   =====================================
+   We will use old, well-known kermit as terminal emulator.
+   If not already installed install it with:
+     sudo apt-get install ckermit
+
+   And use it with:
+     sudo kermit
+   than change the following settings:
+     set line /dev/ttyUSB0
+     set baud 57600
+     set carrier-watch off
+     set flow-control none
+     c
+
+   Automatic configuration could be done if you store the
+   above settings in a file .kermrc in your home folder.
+   
+---------------------------------------------------------------
+5. System individualization
+   ========================
+   You can individualize your system by modification of the
+   two script files:
+
+     buildroot-2014.08/board/altera/sockit/post-image.sh
+     buildroot-2014.08/board/altera/sockit/post-build.sh
+
+   post-build.sh will be executed BEFORE root file system image
+   will be generated, whereas post-image.sh will be executed
+   AFTERwards. Both scripts must be introduced to buildroot by:
+
+    cd ~DE1-SoC/buildroot-2014.08
+    make menuconfig
+      -> System configuration -> Custom script to run before
+                                 creating filesystem images
+                           (board/altera/sockit/post-build.sh)
+      -> System configuration -> Custom script to run after
+                                 creating filesystem images
+                           (board/altera/sockit/post-image.sh)
+
+  You can edit both scripts to configure your embedded system
+  as you want it to be configured.
+
+  Acutally post-build.sh will copy all the files contained
+  in:
+    buildroot-2014.08/ms_files/homedir
+
+  into root's home directory, which is:
+    buildroot-2014.08/output/target/root
+
+  So, any program or data which should be available after
+  DE1-SoC has been booted should be copied to that directory.
+  
+  To make changes applicable you have to update target
+  system's root file system image and to install it on target's
+  SD card. Root file system is updated with:
+    cd ~/DE1-SoC/buildroot-2014.08/output/images
+    make			
+
+  SD card update has to be done according to the instructions
+  given in chapter 3.C.
+  
+---------------------------------------------------------------
+6. Install Altera's Embedded Design Suite
+   ======================================
+   We have to install Altera's Embedded Design Suite to be able
+   to sign second stage bootloader 'u-boot-spl.bin' (see
+   chapter 2). Below are the instructions to install Altera's
+   Embedded Design Suite
+
+   - Download file SoCEDSSetup-14.1.0.186-linux.run from
+     dl.altera.com/soc runtergeladen
+   - Execute SoCEDS installer:
+     sudo mkdir /opt/SoCEDS
+     sudo cp SoCEDSSetup-14.1.0.186-linux.run /opt/SoCEDS
+     cd /opt/SoCEDS
+     sudo chmod 777 SoCEDSSetup-14.1.0.186-linux.run
+     sudo ./SoCEDSSetup-14.1.0.186-linux.run
+       -> Installation im Verzeichnis /opt/altera/14.1
+     - Embedded Command Shell could now be started with:
+       /opt/altera/14.1/embedded/embedded_command_shell.sh
+
+---------------------------------------------------------------
+7. u-boot Configuration
+   ===================
+   Your can change the delay for which u-boot waits until it will
+   boot the OS with the following procedure:
+   - printenv shows 'bootdelay=5'
+   - with 'editenv bootdelay' you could change bootdelay to
+     another value
+   - with 'saveenv' you should save the changes to persistent
+     storage (to MMC)
+	
+---------------------------------------------------------------
+8. References
+   ==========
+   [1] www.rocketboards.org
+   [2] file: buildroot-2014.08/board/altera/sockit/readme.txt
+   [3] Jürgen Quade: "Embedded Linux", dpunkt.verlag, 2014
+   
+---------------------------------------------------------------
+9. ToDo
+   ====
+o Write scripts to automaically generate/uptdate SD cards
+  content.
+o Generate Linux version which uses initramfs in order to boot
+  faster.
+o Omit any kernel modules and packages which are not required
+  by Bumblebee in order to boot faster.
+  

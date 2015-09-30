@@ -1,0 +1,54 @@
+     _______________________________________________
+     |         Ubuntu 12.04 LTS (64 bit)           |
+     |   Linux Virtual Machine for VMware Player   |
+     |                                             |
+     |          - Installation Hints -             |
+     |            (24.04.2015 - ms)                |
+     |_____________________________________________|
+
+This document contains the instructions to set up a virtual
+machine for VMware player, which could be used as a basis 
+for installing the tools required to develop hardware 
+and/or software for Altera's DE1-SoC development board.
+
+64 version of the operating system has been chosen because this
+seems to be necessary if you later want to install Altera's FPGA
+tools (Quartus II, NIOS EDS, etc.). Installation has been done
+on a computer running Windows 8.1 operating system and using 
+VMware Player Version 6.05. (Hint: Using VMware's linux version 
+of the player has caused some undefined problems during 
+installation.)
+   
+In order to set up the VM you have to:
+- download the appropriate iso image from www.ubuntu.com
+  (file: ubuntu-12.04.5-desktop-amd64.iso)
+- start VMware player and:
+  - create a new VM -> specification of the path to the iso
+    image file -> disk size adjusted to 60 GB
+    Further adjustments: 2 GB RAM + 2 CPUs
+	VERY IMPORTANT: in the 'Display' section you have to
+	                disable 'Accelate 3D graphics'
+					(otherwise Ubuntu screen will freeze
+					after login)
+  - VMs name: Ubuntu_1204_64bit_de1soc_v03
+  - Full name: de1soc
+  - User name: de1soc
+    Password:  hsu
+
+After you have started the newly generated VM you should look
+for updates:
+- Open a terminal window and execute:
+    sudo bash    (now you are working as root)
+    sudo apt-get update
+    sudo apt-get upgrade
+
+Install some additional software (not sure if we really need
+all of it):
+   sudo apt-get install sed wget cvs subversion git-core coreutils unzip texi2html  texinfo libsdl1.2-dev docbook-utils gawk python-pysqlite2 diffstat help2man  make gcc build-essential g++ desktop-file-utils chrpath libgl1-mesa-dev  libglu1-mesa-dev mercurial autoconf automake groff libtool xterm
+   sudo apt-get install ia32-libs
+   
+You will also need to make /bin/sh point to bash instead of dash.
+You can accomplish this by running:
+   sudo dpkg-reconfigure dash
+
+

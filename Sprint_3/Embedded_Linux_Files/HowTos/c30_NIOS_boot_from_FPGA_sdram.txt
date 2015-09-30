@@ -1,0 +1,98 @@
+              niosboot - NIOS boot from FPGA sdram
+              ====================================
+                     (2015-01-23 - ms)
+
+1. Overview
+   ========
+   This documents describes a method to boot a NIOS cpu, 
+   which is synthesized in the FPGA part of a Cyclone V SoC
+   chip. This method has been implemented in the 'niosboot'
+   command line tool. niosboot has been tested with:
+    SoPC: NIOS_HPSbasedBootLoader_v01
+    VM:   Ubuntu_1204_64bit_de1soc
+
+   Initial situation is a DE1-SoC based system where FPGA 
+   contains a SoPC with at least one NIOS II cpu.
+   Each NIOS cpu is configured to start from FPGA sdram after
+   reset has been released. Both, reset_vector and 
+   exception_vector, of the NIOS cpu must point to FPGA sdram,
+   and:
+              exception_vector = reset_vector + 0x20
+   must be true.
+
+   Reset of each NIOS cpu is controlled by HPS_Reset_PIO, a 
+   simple output pio device connected to the HPS (ARM9 cpus).
+   HPS must have access to FPGA sdram too.
+
+   HPS system runs linux and the program which should run on
+   the NIOS cpu must be available as a file in intel hex
+   file format (in the following called hexfile). 'niosboot' 
+   is a command line tool which allows to download content of
+   a specified hexfile into sdram memory. The position in
+   sdram is specified in the hexfile itself.
+
+2. 'niostool' Compilation and Installation
+   =======================================
+   You have to boot up the above mentioned VM. Therein you
+   you have open a terminal window, where you have to call:
+     /opt/altera/13.1/embedded/embedded_command_shell.sh
+   in order to setup the cross compile environment.
+
+   niostool source code and makefile are available in folder
+   Apps/niostool. By simply calling 
+      make
+   niostool will be be compiled. Successfully compiled code 
+   could be transfered to DE1-SoC with:
+   - HPS system should be up, i. e. linux is running and you
+     are able to open a terminal session by calling:
+         sudo minicom sockit1
+     in a VM terminal window.
+   - Normally HPS linux has no password installed. But scp tool,
+     which we will use to transfer niostool to the HPS, requires
+     a password. Therefore we have to install a password by
+     calling:
+         passwd
+     in the HPS terminal window.
+   - Now we can transfer niosboot tool to HPS system by calling:
+        scp niosboot root@192.168.178.111:/home/root
+     in the VM terminal window. You have to replace the above 
+     used IP address by the current IP address of the DE1-SoC
+     board.
+     HAVE CARE! VPN connection to HS-ULM should be disconnected
+                before using scp command
+   - In HPS terminal window you could now execute niostool with:
+       ./niostool xxx. hex X
+
+3. Hex File Conversion
+   ===================
+   The NIOS II application we want to execute must be available
+   in .hex file format. Normally NIOS II SBT will generate an
+   executable in .elf format. This file could be converted into
+   a hexfile with:
+   - Start 'NIOS command shell'
+   - In NIOS command shell you have to execute:
+       nios2-elf-objcopy -O ihex file.elf output_file.hex
+   Resulting output_file.hex could be transferred to HPS system
+   with scp tool (see chapter 2)
+
+4. 'niostool' usage
+   ================
+   niostool calling syntax is:
+                niosboot file.hex X
+             File file.hex will be loaded and it's data 
+             will be downloaded to FPGA sdram.
+             X specifies the NIOS cpu for which we 
+             should download code. X gives
+             the number of the NIOS cpu. E. g. X=0 
+             will specifies cpu_s0. X is required to
+             take the right HPS_Reset_PIO pin. Reset of
+             cpu_s0 has to be connected to pio's output
+             pin 0, cpu_s1's reset to pin 1, etc.
+ 
+     Example: niosboot hello.hex 1
+              File hello.hex will be downloaded to FPGA
+              sdram. Before starting download cpu_s1 will
+              be set to reset state. After download reset
+              state will be released, i. e. cpu_s1 will
+              start execution of downloaded code.
+   

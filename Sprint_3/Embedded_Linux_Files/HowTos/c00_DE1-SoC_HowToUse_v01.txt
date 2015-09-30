@@ -1,0 +1,44 @@
+          HowTos how to use DE1-SoC
+          =========================
+              (2015-05-03 - ms)
+
+- If you want to know how to setup a linux VM which you could
+  later extend by installing all the required packages and tools, 
+  please have a look at:
+      ==> c11_DE1-SoC_UbuntuVM.txt
+
+- If you want to know how install all the things you need
+  to build a new bootloader, a new linux image or a new SD
+  card image, please have a look at:
+      ==> c21_DE1-SoC_BuildrootLinux.txt
+
+- If you want to know how to set up a terminal connection to
+  DE1-SoC board you also should have a look at:
+      ==> c21_DE1-SoC_BuildrootLinux.txt
+
+- If you want to know how to develope a linux application
+  for DE1-SoC board, please have a look at:
+      ==> c31_HPS_appDevelopment.txt
+      ==> c30_NIOS_boot_from_FPGA_sdram.txt
+
+  (There you will find some hints how a special application,
+  the niosboot tool, was developed.)
+
+- If you have designed a nios based SoPC where the nios cpu
+  should boot from onchip ram memory, here you could find
+  some hints how to do it:
+      ==> c40_NIOS_boot_from_onchip_ram.txt
+
+- If you have designed a nios based SoPC where the nios cpu
+  should first copy (boot) its application software from EPCQ
+  non-volatile memory to sdram and then start it, here you find
+  a description of the problems waiting for you:
+      ==> c50_NIOS_boot_from_EPCQ_problems.txt
+
+  An alternative and may even more flexible solution to transfer
+  nios application code to sdram and to start it there is 
+  given in:
+      ==> c30_NIOS_boot_from_FPGA_sdram.txt
+
+  Good Luck!!!
+
