@@ -1,0 +1,38 @@
+Implementation:
+
+Since is a serial Format it can be read directly from a UART.
+Luckily Altera is offering an RS232 UART IP Core, which can be added to our SoPC using Qsys.
+It only requires two additional GPIO Pins, for receiving or transmit serial data.
+Reading and Controlling the UART will be Part of the UART Driver.
+The UART has to be initiated with the following settings, to receive a SUMD-Frame:
+	- 115200 Baud
+	- No Parity 
+	- 1 Stop Bit
+
+Every received Byte has to be interpreted according to the Definition of the SUMD format,
+which was described in the previous Section "//TODO Name of section".
+Following Steps are executed by the RC interpreted Controller:
+
+- Saving raw SUMD-Frame Bytes from the UART:
+	The SUMD-Controller has to wait for a new SUMD-Frame. 
+	A frame starts if the value of a received Byte equals the VendorID.
+	After that, the following Bytes will be saved in an Array.
+	The size of the Array will be equal to the frame this can be calculated with:
+		SUMD-Frame length = SUMD Header length + Number of Channels * 2 + CRC length)
+		
+- Interpreting the received SUMD-Frame:
+	According to the SUMD format description, every Byte has its own specific purpose.
+	The actual received RC-commands are sliced into a High Byte and a Low Byte, 
+	thus it is necessary to unroll both Bytes to a 16 Bit Integer. 
+	Every Channel value will be stored in an Array, 
+	which is accessible in a struct including all additional Data of the SUMD-Frame.
+	
+	
+UART Driver:
+
+This driver will offer functions to initiate and read the RS232 UART IP Core.
+It is also possible to check if a new Byte was read. This is highly recommended 
+if only one Byte will be read from the UART.
+The driver is divided in a source file "b_uartriver.c" and a header file "b_uartriver.h".
+The UART can be selected with an enumeration, which is defined in
+the header file of the driver.

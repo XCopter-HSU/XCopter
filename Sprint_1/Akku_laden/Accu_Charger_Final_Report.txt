@@ -4,5 +4,5 @@ A tutorial was made, that describes how to charge the differing Batteries that w
 Project. Three batteries are being used: "Flight Power Hacker evo 20 6S1P" with 4900mAh,
 "XTRON 40C 6S1P" with 5000mAh" and a NiCd battery pack with 110mAh. Three charging configurations 
 where saved in the memory of the charging station (Ultra Duo Plus 60). With these presets and our 
-How-To with additional information about batteries and a step by step explanation (HowTo_Charging_Battery_Packs_for_Xcopter.doc), everyone in the team should be able to charge
+How-To with additional information about batteries and a step by step explanation (HowTo_Charging_Battery_Packs_for_Xcopter.pdf), everyone in the team should be able to charge
 batteries by themselves, which is important for more autonomy.
