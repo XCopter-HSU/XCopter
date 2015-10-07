@@ -1,0 +1,16 @@
+Flight Test 2
+
+-----Organisation-----
+The Organisation was similar to to the first flight test. For security reasons we went to a Model flying site. Againe the control was taken over by Mr. Höft because his Model flying insurance. 
+
+-----Changes at the xCopter since the last Flight test-----
+To mount the motors without the rubber vibration damper the mount points had to be modified slightly. 
+The motor direction of rotation has been checked. 
+
+-----Attempt 1----- 
+Even though the conditions were bad(it was very windy this day) the xCopter  flew very well. 
+The Test was a success. 
+
+-----Conclusion----- 
+In quadrocopter form the xCopter does only use about 50% of its power, so there is a lot of capacity for payload left. 
+Now it’s proven that the Model is able to fly and we can start to work seriously with our own flight controller.
