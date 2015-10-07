@@ -100,7 +100,7 @@ struct SUMD_Frame* parseSUMDFrame(uchar_t* receivedRawFrameData) {
 				//shift high byte by 8 and bitwise OR the low byte to create the 16 bit channel value
 				sumdFrame->channel_data[i] = ((uint16_t) tmp[0] << 8) | tmp[1];
 				//set channel pointer to next channel (increment by 16)
-				tmp += 16;
+				tmp += 2; //replased 16 with 2
 			}
 			return sumdFrame;
 		}
