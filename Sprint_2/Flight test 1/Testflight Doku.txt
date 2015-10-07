@@ -1,4 +1,9 @@
 *********First Testflight ********
+
+-----Organisation-----
+For safety reasons it was not possible to Test the xCopter in the Laboratory or at the campus. So for testing we had to go to a Model flying site. In addition the person that controlled had to had a Model Flying insurance. 
+Jochen Höft already had an Flying insurance and connections to the near model flying site in Staig, so we went there for our Testflights. 
+
 -----Preparation----- 
 At first all Components got attached to the Model.
 In addition to the aircraft, a basic equipment of tools and spare parts was taken to the Model flying site.
