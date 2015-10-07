@@ -1,0 +1,31 @@
+RC Transmitter Settings.
+
+The XCopter Flight-Control unit is designed to receive its control commands via a Graupner HOTT Receiver.
+Every option listed below is a a translated version of the option entry, since the Language of the Transmitter is german.
+The german option names are singed as [Name].
+The XCopter Profile Settings on the MX-16 Transmitter are:
+
+Basic model settings [Grundeinst]:
+	- control mode [Steueranord]  = "2"
+	- throttle stick behaviour [Motor an K1] = "kein" (default)
+	- changing Flight Phase with Channel8 delayed[K8 Verzögert] = "nein" (default)
+	- Tail unit type [Leitwerk] = "normal" (default)
+	- Tail unit servo type[Querr./Wölb] = "1QR" (default)
+	- [Empf. Ausg] = 	S 2 -> [Ausgang] 1
+						S 3 -> [Ausgang] 2
+						S 1 -> [Ausgang] 3
+						rest is at its default value
+						
+Receiver Settings [Telemetrie] -> [Einstellen, Anzeigen]:
+	- Receiver output type [CH OUT TYPE] = "SUMD HD 08"
+
+More information is available in the original Graupner MX-16 user manual.
+
+
+Graupner HoTT can deliver a digital SUM-Signal (SUMD) on most common HOTT Receivers. 
+The Signal can be found on the following Outputs:
+
+GR-12L -> Output #6
+GR-16 -> Output #8
+GR-24 -> Output #8
+GR-32 -> Output #8
