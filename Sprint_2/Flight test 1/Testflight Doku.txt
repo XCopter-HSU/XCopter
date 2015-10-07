@@ -1,0 +1,37 @@
+*********First Testflight ********
+
+-----Organisation-----
+For safety reasons it was not possible to Test the xCopter in the Laboratory or at the campus. So for testing we had to go to a Model flying site. In addition the person that controlled had to had a Model Flying insurance. 
+Jochen Höft already had an Flying insurance and connections to the near model flying site in Staig, so we went there for our Testflights. 
+
+-----Preparation----- 
+At first all Components got attached to the Model.
+In addition to the aircraft, a basic equipment of tools and spare parts was taken to the Model flying site.
+Jochen Höft 
+
+-----Attempt 1-----
+The first attempt failed. The Motors had the wrong direction of rotation. So there was now upwards boost but a downwards boost.
+
+Error Analysis: Falsely it was assumed that the rotors were mounted incorrectly. So we switched the Rotors which led to upward boost from every rotor.
+
+-----Attempt 2-----
+The wrong error analysis led to another fail attempt. From the perspective of the flight controller now each rotor turned the wrong direction. Now the yaw correction worked the wrong direction and self-reinforced the rotation of the xCopter. The vehicle came immediately out of control. 
+
+Error Analysis: The spinning direction of all motors were checked and we noticed the wrong spinning direction. The reason for this was that the flight controller has been mounted rotated by 90°. The flight controller was turned by 90° and remounted. In addition all rotors was switched back in the correct possition.
+
+-----Attempt 3-----
+This attempt startet well but the xCopter lost upward boost at one side and crashed.
+
+Error Analysis: It turned out that one rotor loosened. All rotor screws were tightened.
+
+-----Attempt 4-----
+The Takeoff went well. However, one Motor flew away
+
+Error Analysis: The rubber vibration damper that were used to mount the motors seemed to be not strong enough.
+The tools and spare parts we had were not enough to mount the motors without the vibration damper.
+
+-----Conclusion-----
+The xCopter vehicle should be able to fly.
+The rubber vibration damper are not recommended.
+Another Test is necessary.
+
