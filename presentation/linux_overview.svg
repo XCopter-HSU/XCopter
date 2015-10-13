@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generiert durch Microsoft Visio, SVG Export linux_overview.svg Page-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="8.27105in" height="4.83404in"
+		viewBox="0 0 595.516 348.051" xml:space="preserve" color-interpolation-filters="sRGB" class="st9">
+	<v:documentProperties v:langID="1031" v:metric="true" v:viewMarkup="false">
+		<v:userDefs>
+			<v:ud v:nameU="msvNoAutoConnect" v:val="VT0(1):26"/>
+		</v:userDefs>
+	</v:documentProperties>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {visibility:visible}
+		.st2 {fill:#a5a5a5;fill-opacity:0.6;filter:url(#filter_2);stroke:#a5a5a5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.6}
+		.st3 {fill:url(#ptrn15-4294967295);shape-rendering:crispEdges;stroke:#7b8553;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.6;stroke-width:0.75}
+		.st4 {fill:#000000;font-family:Calibri;font-size:1.5em;font-weight:bold}
+		.st5 {fill:#000000;font-family:Calibri;font-size:1.16666em}
+		.st6 {font-size:1em}
+		.st7 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st8 {fill:#000000;font-family:Courier New;font-size:1.00001em}
+		.st9 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<defs id="Patterns_And_Gradients">
+		<pattern id="ptrn15-4294967295" v:fillPattern="15" v:foreground="#f2f2f2" v:background="#ececec"
+				patternUnits="userSpaceOnUse" width="6" height="6" viewBox="0 0 64 64">
+			<image x="0" y="0" width="64" height="64" image-rendering="optimizeSpeed"
+					xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAoSURBVChTY/j06dN/EH7z5g0Yo/MZsAki88EK8CkCW4FP0cC74dN/AE5b8wG7R92tAAAAAElFTkSuQmCC"/>
+		</pattern>
+	</defs>
+	<defs id="Filters">
+		<filter id="filter_2">
+			<feGaussianBlur stdDeviation="2"/>
+		</filter>
+	</defs>
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<v:userDefs>
+			<v:ud v:nameU="msvThemeOrder" v:val="VT0(0):26"/>
+		</v:userDefs>
+		<title>Zeichenblatt-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<g id="shape4-1" v:mID="4" v:groupContext="shape" transform="translate(18.12,-18.12)">
+			<title>Feld.4</title>
+			<desc>Embedded Linux System</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="279.638" cy="192.146" width="559.28" height="311.811"/>
+			<g id="shadow4-2" v:groupContext="shadow" v:shadowOffsetX="1.22561E-016" v:shadowOffsetY="-2.00157" v:shadowType="1"
+					transform="matrix(1,0,0,1,0,2.00157)" class="st1">
+				<rect x="0" y="36.24" width="559.276" height="311.811" class="st2"/>
+			</g>
+			<rect x="0" y="36.24" width="559.276" height="311.811" class="st3"/>
+			<text x="188.59" y="56.44" class="st4" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Embedded Linux System</text>		</g>
+		<g id="shape1-9" v:mID="1" v:groupContext="shape" transform="translate(28.4665,-225.049)">
+			<title>Feld</title>
+			<desc>Bootloader U-Boot</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="70.8661" cy="312.618" width="141.74" height="70.8661"/>
+			<g id="shadow1-10" v:groupContext="shadow" v:shadowOffsetX="1.22561E-016" v:shadowOffsetY="-2.00157" v:shadowType="1"
+					transform="matrix(1,0,0,1,0,2.00157)" class="st1">
+				<rect x="0" y="277.185" width="141.732" height="70.8661" class="st2"/>
+			</g>
+			<rect x="0" y="277.185" width="141.732" height="70.8661" class="st3"/>
+			<text x="17.33" y="316.82" class="st5" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Bootloader U-Boot</text>		</g>
+		<g id="shape2-16" v:mID="2" v:groupContext="shape" transform="translate(190.041,-225.049)">
+			<title>Feld.2</title>
+			<desc>Linux Kernel 3.10.37 long term</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="188.504" cy="312.618" width="377.01" height="70.8661"/>
+			<g id="shadow2-17" v:groupContext="shadow" v:shadowOffsetX="1.22561E-016" v:shadowOffsetY="-2.00157" v:shadowType="1"
+					transform="matrix(1,0,0,1,0,2.00157)" class="st1">
+				<rect x="0" y="277.185" width="377.008" height="70.8661" class="st2"/>
+			</g>
+			<rect x="0" y="277.185" width="377.008" height="70.8661" class="st3"/>
+			<text x="101.51" y="316.82" class="st5" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Linux Kernel 3.10.37 long term</text>		</g>
+		<g id="shape3-23" v:mID="3" v:groupContext="shape" transform="translate(28.4665,-30.8759)">
+			<title>Feld.3</title>
+			<desc>Root Filesystem</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="269.291" cy="258.76" width="538.59" height="178.583"/>
+			<g id="shadow3-24" v:groupContext="shadow" v:shadowOffsetX="1.22561E-016" v:shadowOffsetY="-2.00157" v:shadowType="1"
+					transform="matrix(1,0,0,1,0,2.00157)" class="st1">
+				<rect x="0" y="169.468" width="538.583" height="178.583" class="st2"/>
+			</g>
+			<rect x="0" y="169.468" width="538.583" height="178.583" class="st3"/>
+			<text x="224.21" y="186.07" class="st5" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Root Filesystem</text>		</g>
+		<g id="shape5-30" v:mID="5" v:groupContext="shape" transform="translate(45.4743,-52.1357)">
+			<title>Feld.5</title>
+			<desc>Init process</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="39.685" cy="287.106" width="79.38" height="121.89"/>
+			<g id="shadow5-31" v:groupContext="shadow" v:shadowOffsetX="1.22561E-016" v:shadowOffsetY="-2.00157" v:shadowType="1"
+					transform="matrix(1,0,0,1,0,2.00157)" class="st1">
+				<rect x="0" y="226.161" width="79.3701" height="121.89" class="st2"/>
+			</g>
+			<rect x="0" y="226.161" width="79.3701" height="121.89" class="st3"/>
+			<text x="6.98" y="242.76" class="st5" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Init process</text>		</g>
+		<g id="shape6-37" v:mID="6" v:groupContext="shape" transform="translate(148.939,-52.1357)">
+			<title>Feld.6</title>
+			<desc>Libraries</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="39.685" cy="287.106" width="79.38" height="121.89"/>
+			<g id="shadow6-38" v:groupContext="shadow" v:shadowOffsetX="1.22561E-016" v:shadowOffsetY="-2.00157" v:shadowType="1"
+					transform="matrix(1,0,0,1,0,2.00157)" class="st1">
+				<rect x="0" y="226.161" width="79.3701" height="121.89" class="st2"/>
+			</g>
+			<rect x="0" y="226.161" width="79.3701" height="121.89" class="st3"/>
+			<text x="15.4" y="242.76" class="st5" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Libraries</text>		</g>
+		<g id="shape7-44" v:mID="7" v:groupContext="shape" transform="translate(467.837,-52.1357)">
+			<title>Feld.7</title>
+			<desc>Config files</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="39.685" cy="287.106" width="79.38" height="121.89"/>
+			<g id="shadow7-45" v:groupContext="shadow" v:shadowOffsetX="1.22561E-016" v:shadowOffsetY="-2.00157" v:shadowType="1"
+					transform="matrix(1,0,0,1,0,2.00157)" class="st1">
+				<rect x="0" y="226.161" width="79.3701" height="121.89" class="st2"/>
+			</g>
+			<rect x="0" y="226.161" width="79.3701" height="121.89" class="st3"/>
+			<text x="8.39" y="242.76" class="st5" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Config files</text>		</g>
+		<g id="shape8-51" v:mID="8" v:groupContext="shape" transform="translate(258.073,-52.1357)">
+			<title>Feld.8</title>
+			<desc>Devices Nodes</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="39.685" cy="287.106" width="79.38" height="121.89"/>
+			<g id="shadow8-52" v:groupContext="shadow" v:shadowOffsetX="1.22561E-016" v:shadowOffsetY="-2.00157" v:shadowType="1"
+					transform="matrix(1,0,0,1,0,2.00157)" class="st1">
+				<rect x="0" y="226.161" width="79.3701" height="121.89" class="st2"/>
+			</g>
+			<rect x="0" y="226.161" width="79.3701" height="121.89" class="st3"/>
+			<text x="17.95" y="242.76" class="st5" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Devices<v:newlineChar/><tspan
+						x="21.58" dy="1.2em" class="st6">Nodes</tspan></text>		</g>
+		<g id="shape9-59" v:mID="9" v:groupContext="shape" transform="translate(367.207,-52.1357)">
+			<title>Feld.9</title>
+			<desc>Programms Demons</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="39.685" cy="287.106" width="79.38" height="121.89"/>
+			<g id="shadow9-60" v:groupContext="shadow" v:shadowOffsetX="1.22561E-016" v:shadowOffsetY="-2.00157" v:shadowType="1"
+					transform="matrix(1,0,0,1,0,2.00157)" class="st1">
+				<rect x="0" y="226.161" width="79.3701" height="121.89" class="st2"/>
+			</g>
+			<rect x="0" y="226.161" width="79.3701" height="121.89" class="st3"/>
+			<text x="6.93" y="242.76" class="st5" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Programms<v:newlineChar/><tspan
+						x="16.2" dy="1.2em" class="st6">Demons</tspan></text>		</g>
+		<g id="shape10-67" v:mID="10" v:groupContext="shape" transform="translate(38.0885,-87.4901)">
+			<title>Tabelle.10</title>
+			<desc>/sbin/init</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="47.0709" cy="338.051" width="94.15" height="20"/>
+			<rect x="0" y="328.051" width="94.1417" height="20" class="st7"/>
+			<text x="11.06" y="341.65" class="st8" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>/sbin/init</text>		</g>
+		<g id="shape11-70" v:mID="11" v:groupContext="shape" transform="translate(144.089,-86.1515)">
+			<title>Tabelle.11</title>
+			<desc>/lib</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="47.0709" cy="338.051" width="94.15" height="20"/>
+			<rect x="0" y="328.051" width="94.1417" height="20" class="st7"/>
+			<text x="32.67" y="341.65" class="st8" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>/lib</text>		</g>
+		<g id="shape12-73" v:mID="12" v:groupContext="shape" transform="translate(461.569,-87.4901)">
+			<title>Tabelle.12</title>
+			<desc>/etc</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="47.0709" cy="338.051" width="94.15" height="20"/>
+			<rect x="0" y="328.051" width="94.1417" height="20" class="st7"/>
+			<text x="32.67" y="341.65" class="st8" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>/etc</text>		</g>
+		<g id="shape13-76" v:mID="13" v:groupContext="shape" transform="translate(359.522,-86.1515)">
+			<title>Tabelle.13</title>
+			<desc>/bin /sbin /usr/bin</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="47.0709" cy="338.051" width="94.15" height="20"/>
+			<rect x="0" y="328.051" width="94.1417" height="20" class="st7"/>
+			<text x="32.67" y="327.25" class="st8" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>/bin<v:newlineChar/><tspan
+						x="29.07" dy="1.2em" class="st6">/</tspan>sbin<v:newlineChar/><tspan x="18.27" dy="1.2em" class="st6">/</tspan>usr/bin</text>		</g>
+		<g id="shape14-81" v:mID="14" v:groupContext="shape" transform="translate(252.403,-86.1515)">
+			<title>Tabelle.14</title>
+			<desc>/dev</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="47.0709" cy="338.051" width="94.15" height="20"/>
+			<rect x="0" y="328.051" width="94.1417" height="20" class="st7"/>
+			<text x="32.67" y="341.65" class="st8" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>/dev</text>		</g>
+	</g>
+</svg>
