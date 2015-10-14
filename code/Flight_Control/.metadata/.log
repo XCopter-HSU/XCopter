@@ -7460,3 +7460,85 @@ java.lang.ClassCastException
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.ClassCastException
+!SESSION 2015-10-08 13:23:17.175 -----------------------------------------------
+eclipse.buildId=4.5.0.I20150603-2000
+java.version=1.8.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.jface 2 0 2015-10-08 13:23:33.429
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-10-08 13:23:33.429
+!MESSAGE A conflict occurred for CTRL+SHIFT+TAB:
+Binding(CTRL+SHIFT+TAB,
+	ParameterizedCommand(Command(org.eclipse.ui.window.previousEditor,Previous Editor,
+		Switch to the previous editor,
+		Category(org.eclipse.ui.category.window,Window,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3a7abd4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+TAB,
+	ParameterizedCommand(Command(org.eclipse.papyrus.editor.previousTabCommand,Previous Tab,
+		,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3846ba32,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-10-08 13:23:33.429
+!MESSAGE A conflict occurred for CTRL+TAB:
+Binding(CTRL+TAB,
+	ParameterizedCommand(Command(org.eclipse.ui.window.nextEditor,Next Editor,
+		Switch to the next editor,
+		Category(org.eclipse.ui.category.window,Window,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@40a32c25,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+TAB,
+	ParameterizedCommand(Command(org.eclipse.papyrus.editor.nextTabCommand,Next Tab,
+		,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@685280dd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-10-08 13:23:33.429
+!MESSAGE A conflict occurred for ALT+CTRL+P:
+Binding(ALT+CTRL+P,
+	ParameterizedCommand(Command(org.eclipse.linuxtools.changelog.core.preparechangelog,Prepare Changelog,
+		Prepares Changelog,
+		Category(org.eclipse.linuxtools.changelog,Changelog,Changelog key bindings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@56957f08,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+P,
+	ParameterizedCommand(Command(org.eclipse.m2e.profiles.ui.commands.selectMavenProfileCommand,Select Maven Profiles,
+		,
+		Category(org.eclipse.ui.category.window,Window,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5b0fc8c2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui 4 4 2015-10-08 13:23:47.057
+!MESSAGE Conflicting handlers for org.eclipse.papyrus.infra.ui.menu.commands.QuickFormattingUpperCaseCommand: {org.eclipse.papyrus.infra.nattable.modelexplorer.handlers.NattableQuickFormatHandler} vs {org.eclipse.papyrus.uml.modelexplorer.handler.UmlQuickFormatHandler}
+
+!ENTRY org.eclipse.ui 4 4 2015-10-08 13:23:47.062
+!MESSAGE Conflicting handlers for org.eclipse.papyrus.infra.ui.menu.commands.QuickFormattingLowerCaseCommand: {org.eclipse.papyrus.infra.nattable.modelexplorer.handlers.NattableQuickFormatHandler} vs {org.eclipse.papyrus.uml.modelexplorer.handler.UmlQuickFormatHandler}
+
+!ENTRY org.eclipse.ui 4 4 2015-10-08 13:23:47.066
+!MESSAGE Conflicting handlers for org.eclipse.papyrus.infra.ui.menu.commands.QuickFormattingSwitchSpace2UnderscoreCommand: {org.eclipse.papyrus.uml.modelexplorer.handler.UmlQuickFormatHandler} vs {org.eclipse.papyrus.infra.nattable.modelexplorer.handlers.NattableQuickFormatHandler}
+
+!ENTRY org.eclipse.ui 4 4 2015-10-08 13:23:47.067
+!MESSAGE Conflicting handlers for org.eclipse.papyrus.infra.ui.menu.commands.QuickFormattingCapitalizeFirstLetterCommand: {org.eclipse.papyrus.uml.modelexplorer.handler.UmlQuickFormatHandler} vs {org.eclipse.papyrus.uml.diagram.menu.actions.handlers.DiagramQuickFormatHandler}
+
+!ENTRY org.eclipse.ui 4 4 2015-10-08 13:23:47.068
+!MESSAGE Conflicting handlers for org.eclipse.papyrus.infra.ui.menu.commands.QuickFormattingRemoveSpaceCommand: {org.eclipse.papyrus.infra.nattable.modelexplorer.handlers.NattableQuickFormatHandler} vs {org.eclipse.papyrus.uml.diagram.menu.actions.handlers.DiagramQuickFormatHandler}
+
+!ENTRY org.eclipse.ui 2 2 2015-10-08 13:23:48.488
+!MESSAGE Invalid preference category path: org.eclipse.linuxtools.javadocs.preferences1 (bundle: org.eclipse.linuxtools.javadocs, page: org.eclipse.linuxtools.internal.javadocs.ui.page1)
