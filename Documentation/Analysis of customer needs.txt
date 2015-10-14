@@ -1,0 +1,56 @@
+Analysis of customer needs
+
+Old Definition of Requirements:
+
+"The system has to carry a payload of minimum 1 kg. Therefore normally 6 to 8 rotors
+are needed and it has to be evaluated which number of rotors fits our requirement best by
+measuring the lifting capacity of selected motors and rotors.
+Another requirement of the customer is that the model should fit through a standard door.
+Because of this the model has to be constructed with a maximum width of 85cm to have
+enough clearance.
+The system also has to reach a flight time of 10 to 20 minutes. For multi-copters normally
+Lithium Polymer accumulators with 1 to 10 cells and 500 to 20000 mAh are used and it
+has to be measured how much power is consumed by the system, especially the motors. To
+reach these requirements the weight of the model should be as lightweight as possible. All
+components have to be checked regarding to their weight and the use of different materials
+such as carbon fiber should be evaluated.
+The Customer also wants to have a modular design of the whole system.
+Therefore a physical model has to be designed in order to have enough space for additional
+modules such as new sensors. It also has to be possible to change the weight distribution to
+keep the model balanced and also the electronics need to have enough standard interfaces
+to add new hardware components.
+Another requirement of the customer is that the different software components don’t interfere
+with each other. To fulfil this, the system should consist of multiple processors
+that have separated memory and interact with each other over bridges.
+The customer also wants to have the possibility to extend the existing multiprocessor system
+with more powerful hardware over a widely spread communication protocol.
+To meet this requirement an Ethernet interface should be realized and the system should
+support to give the new hardware access to the required sensors.
+To meet security requirements manual interaction has to be possible at all times.
+Therefore the system has to have a receiver for a remote control and has to meet hard
+real-time requirements.
+The system also should be able to fly stable and to give the other processors the possibility
+to control the flight of the system. Therefore a flight control unit has to be designed that
+has an interface with which other processors can interact."
+
+
+Active Customer Needs:
+
+Since this project was transferred to us. The Basic hardware functionality was completed by our predecessors.
+As well as a interprocessor communication system.
+Thus the customer needs can be extended with the following requirements.
+
+The first demand was to ensure that the basic construction of the Multi copter is working properly. 
+In order to receive fast test results, a commercial flight controller has to be integrated.
+Another requirement is to provide a power supply that is capable of delivering sufficient power for all components.
+One of the main requirements was previously described as "The system should be able to fly stable and to give the other processors the possibility
+to control the flight of the system".
+The fist version of the flight controller shall be offering the bare minimum functions to fly the Quadcopter model.
+However it has to be designed to offer improve its stabilization capability by more sensor data (e.g. magnetometer, barometer).
+Furthermore it should provide a connection to a ground monitoring station, using a communication protocol which was originally developed for 
+a commercial Flight controller called "Pixhawk". 
+The connection to the monitoring station should be established via WiFi. 
+Another task for the HPS will controlling the Kinect cameras.
+
+
+
