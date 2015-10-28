@@ -1,0 +1,39 @@
+Besprechung der Zwischenpräsentation vom 15.10.2015
+
+Kunden: Prof. Steiper, Prof. Strahnen
+
+Themen: 	- Roter Faden für die Zukunft
+			- Nachbesprächung Zwischenpräsentation
+
+Gesprächsführer: Professor Steiper
+Thema: Zukünftiger Ablauf des Projekts
+-----------------------------------------------------------------------------------------------------------
+Thomas: saubere ansteuerung der motoren, implementierung pid regler, merge der einzelnen Teile
+		zum Flugregler. Ziel des Sprints ist den Flugregler fertigzubekommen
+Steiper: Rohdaten bekommen, Werte glätten, Verbindung zum remote controll system (Sollwert der Regelung)
+		 Gruppe Drahtlose Kommunikation sollen irgendwelche Daten gesendet bekommen um diese anzuzeigen.
+		 Daniel: Kamera hinten anstellen, FIFO auslesen und Daten an Bodenstation senden hat höhere Prio.
+Strahnen: empfiehlt uCOS2 als RTOS einzusetzen. MCAPI baut auf Task-Konzept auf weswegen uCOS2 empfehlenswert.
+Steiper: Kritisch den 12ms Abtastzeit gegenüber -> timing Probleme beim DE1-Board. Strahnen sieht das nicht so
+		 kritisch. -> Echtzeitscheduling wichtig, Tasks muss definierte Zeit zugeordnet werden.
+Steiper: Will ein gescheites Klassendiagramm.
+Flo: präsentiert das aktuelle Diagramm.
+Steiper: roll und pitch brauchen Beschl.(Accel-) und Drehraten(Gyro-) Sensoren.
+		 Modul von VorVorgruppe (in Software) existiert mit neun (Sensor-?)Inputströmen als Rohdaten und wirft drei 
+		 Winkel raus. Module bei Steiper besorgen in Java und C++.
+			Logging: Rohdaten, gefilterte Daten, PID-Ausgangswerte (für plot IST- gegen SOLL-Wert)		 
+Strahnen: Wie soll das auslesen der Daten geschehen? Er empfiehlt das Speichern der Sensordaten in einem Struct,
+		  von dem die einzelnen Tasks ihre benötogten Werte einfach auslesen.
+		  -> Nochmal Gedanken über Taskprioritäten machen, Logging darf Regelung nicht stören.
+		  MCAPI geht von Mehrrechnersystem aus, mit getrenntem Speicher, alternative wäre machbar aber würde ent-
+		  kopplung zerstören
+Steiper: Daten die an die Bodenstation geschickt werden, sollten (evtl.) selber ausgewählt werden können.
+		 Housekeepinggeschichten?
+Steiper: ARM bekommt in der ersten Softwareiteration alle Daten aus den FIFOs. Steiper würde lieber vorher schon
+		 filtern.
+gesetzter Zeitrahmen: Unser Ziel ist die besprochenen Aufgaben bis Weihnachten zu erfüllen. Ob das dann klappt ist
+		  eine andere Frage.
+Steiper: Grundstruktur erstellen und dann erst die Klassen mit Leben füllen, oder Klassen erstellen, spezifizieren
+		 und am Ende versuchen zusammenzuführen. -> Einigung auf Struktur zuerst.
+
+------->>>>>> uCOS2 aufsetzen, tasks vorsehen, prios setzen, interfaces definieren.
