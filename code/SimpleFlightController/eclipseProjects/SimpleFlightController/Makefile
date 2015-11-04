@@ -153,6 +153,7 @@ C_SRCS += Drivers/Driver_Motor.c
 C_SRCS += Drivers/Driver_PWM.c
 C_SRCS += Drivers/Driver_RC.c
 C_SRCS += SensorDataManager.c
+C_SRCS += PIDToMotorMapper_notepad.c
 CXX_SRCS :=
 ASM_SRCS :=
 
