@@ -1,9 +1,5 @@
 /*
- *	SensorDataManager.h
- *
- *  Created on: 04.11.2015
- *      Author: aott
- *
+ *SensorDataManager.h
  *
  *	This Manager should provide a Method which reads the values from all Sensors and write it to an array
  *
@@ -17,9 +13,6 @@
  *
  */
 
-
 #include "b_errorcodes.h"
 
-//Asumption: rawSensordata[9]
-
-int readSensorData(double* rawSensorData);
+int readSensorData(double*);

@@ -12,13 +12,3 @@
 #include "Drivers/Driver_Accl.h"
 #include "Drivers/Driver_Compa.h"
 #include "Drivers/Driver_Gyro.h"
-
-
-
-int readSensorData(double* rawSensorData){
-
-
-
-
-	return NO_ERR;
-}

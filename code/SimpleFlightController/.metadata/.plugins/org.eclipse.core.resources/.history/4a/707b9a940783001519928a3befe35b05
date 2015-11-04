@@ -20,6 +20,5 @@
 
 #include "b_errorcodes.h"
 
-//Asumption: rawSensordata[9]
 
-int readSensorData(double* rawSensorData);
+int readSensorData(double*);
