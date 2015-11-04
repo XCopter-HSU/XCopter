@@ -1,8 +1,7 @@
 #include "PIDToMotorMapper.h"
+#include "confMapper.h"
 
-
-#define PWM_OBERGRENZE = 250		// ACHTUNG !!!!!!		Werte für Obergrenze und Untergrenze sind momentan nur Beispielwerte    !!!!!
-#define PWM_UNTERGRENZE = 10 
+ 
 #define PIDMIX(X,Y,Z) throttle + roll *X + pitch *Y + yawDirection * yaw *Z
 
 
@@ -16,7 +15,7 @@ int8_t mapToMotors(int16_t throttle, int16_t roll, int16_t pitch, int16_t yaw, i
     motor[3] = PIDMIX(+1,-1,-1); //FRONT_L	
 	
 /*#elif defined ( HEX )
-	motor[0] = PIDMIX(-1,+1,-1);	// ACHTUNG !!!!!!		Sind noch nicht die richtigen Werte    !!!!!
+	motor[0] = PIDMIX(-1,+1,-1);					// ACHTUNG !!!!!!		Sind noch nicht die richtigen Werte    !!!!!
     motor[1] = PIDMIX(-1,-1,+1);
     motor[2] = PIDMIX(+1,+1,+1); 
     motor[3] = PIDMIX(+1,-1,-1); 
