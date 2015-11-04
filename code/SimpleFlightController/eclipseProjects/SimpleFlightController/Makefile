@@ -144,9 +144,6 @@ ELF := SimpleFlightController.elf
 # Paths to C, C++, and assembly source files.
 C_SRCS += main.c
 C_SRCS += Logger.c
-C_SRCS += Accelometer.c
-C_SRCS += Compass.c
-C_SRCS += Gyro.c
 C_SRCS += RC_Receiver.c
 C_SRCS += Drivers/Driver_Accl.c
 C_SRCS += Drivers/Driver_Compa.c
@@ -155,6 +152,7 @@ C_SRCS += Drivers/Driver_I2C.c
 C_SRCS += Drivers/Driver_Motor.c
 C_SRCS += Drivers/Driver_PWM.c
 C_SRCS += Drivers/Driver_RC.c
+C_SRCS += SensorDataManager.c
 CXX_SRCS :=
 ASM_SRCS :=
 

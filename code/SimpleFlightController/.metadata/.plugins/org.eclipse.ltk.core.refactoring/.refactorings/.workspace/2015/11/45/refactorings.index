@@ -1,2 +1,6 @@
 1446630596322	Delete resource 'SimpleFlightController'
 1446630597820	Delete resource 'SimpleFlightController_bsp'
+1446633664408	Delete resource 'SimpleFlightController/Accelometer.c'
+1446633666343	Delete resource 'SimpleFlightController/Accelometer.h'
+1446633669837	Delete resource 'SimpleFlightController/Compass.c'
+1446633671912	Delete resource 'SimpleFlightController/Compass.h'
