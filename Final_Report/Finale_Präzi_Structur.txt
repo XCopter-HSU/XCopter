@@ -1,0 +1,75 @@
+Versuchen 3 Folien einzuhalten
+Pro Person 5 Minuten (wenns deutlich mehr oder weniger wird absprechen!)
+Bis morgen (Mittwoch 13.01.15 11:00Uhr an IWER)
+
+PRO 
+
+Stephan
+-Introduction  
+	- was ist das projekt (hexacopter, raum, autonom,...)
+	- Ist-Zustand des übernommenen projekts (von vorgängern)
+	- Anforderungen der customer
+		
+
+Lukiii <3
+-Project Management
+	- Scrum 
+	- organisation allgemein
+	- kleine gruppen
+		-Flight tests > mussten erst schauen ob es überhaupt fliegt
+		-Commercial Flight control wurde dafür verwendet
+		-> Ergebnis war dass das Modell grundsätzlich fliegt 
+		   und wir mit der eigentlichen arbeit starten können (prios auf was anderes)	
+
+Fl0|/\| <3 <3 <3
+-System Architecture 
+	- Boards (komponentendiagramm)
+	- Komplettübersicht
+	 
+Jochen
+-Hardware
+	-Power supply
+	-RC Control 
+	-SUMD
+	-UART Driver
+
+Dani
+-Linux 
+	-Build Root
+	-Wifi
+	-MCAPI
+	-MAVLink
+
+
+-Flight Controller  (beschränken auf Flows Diagramm, nicht zu sehr ins detail!)
+	Fl0\/\/ <3 <3 <3
+	-Domain model
+
+	Alex
+	- Datenfluss Ranges
+	
+	Thoooommy
+	-PID Regulator 
+	-Motor Mapper
+
+
+
+-Challenges (Problems)
+	Thommy
+	- Flight Controller
+	
+	Jan 
+	- Linux 
+	- Vergleich alter zustand(übernommen) & jetziger zustand
+	
+	
+
+Alex
+-Lesson Learned
+	- siehe DokuDoku!?
+
+
+
+(Raum B208) 
+Start 11:30
+45 min
