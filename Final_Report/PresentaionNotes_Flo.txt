@@ -1,0 +1,20 @@
+Logger jetzt aus ganz aus FC Arch rauslassen??
+
+Genaue Infos über Asus Cams?
+
+
+Systemarchitecture
+~~~~~~~~~~~~~~~~~~~~
+	* General overview and description of components
+	* Differences to the old sys arch
+		- Power Supply now external (circuit problems, very cheap, easy to install)
+		- Exchanged Kinects with Asus cams (USB Host Controller problems)
+		- Using WLAN for communication with Ground Control
+
+
+Flight Controller
+~~~~~~~~~~~~~~~~~~~~
+	* Overview of the FC architecture
+	 	- short description of concept
+	* Program flow
+		- very short intro to program flow ( init state, 3 tasks..)
